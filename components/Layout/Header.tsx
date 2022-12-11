@@ -1,14 +1,23 @@
-import Navigation from "../Navigation";
+import Image from "next/image";
+import Navigation from "../Organisms/Navigation";
 
-const Header = () => {
+const Header = ({ scrollRef }: any) => {
   return (
     <>
-      <header aria-label="Page Header">
-        <div className="w-full fixed mx-auto p-5 lg:p-8">
+      <header aria-label="Page Header" id="top" ref={scrollRef}>
+        <div
+          className="w-full bg-primary p-5 "
+          // className={`w-full fixed z-30 mx-auto p-5 lg:p-8 ${
+          //   isVisible && "bg-black opacity-50 "
+          // }`}
+        >
           <div className="flex items-center justify-between max-w-screen-xl mx-auto">
-            <h1 className="text-xl font-bold text-gray-900 lg:text-3xl order-last lg:order-first">
-              座間和也
-            </h1>
+            <a
+              href="/"
+              className="text-xl font-bold text-gray-100 lg:text-3xl order-last lg:order-first cursor-pointer"
+            >
+                <Image src="/logos/restats_logo_only.webp" width={80} height={60} />
+            </a>
             <div className="">
               <Navigation />
             </div>

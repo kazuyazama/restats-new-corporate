@@ -1,3 +1,66 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .underline-transition {
+    @apply before:border-b before:absolute before:bottom-10 before:w-8 before:-translate-x-10 before:opacity-0 before:hover:translate-x-0  before:hover:opacity-100 before:duration-300 
+  }
+}
+
+
+.clip-path-br {
+  clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%); 
+}
+
+.clip-path-bl {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 75%);
+}
+.clip-path-tr {
+  clip-path: polygon(0 0, 100% 25%, 100% 100%, 0 100%);
+}
+
+.clip-path-tl {
+  clip-path: polygon(0 25%, 100% 0, 100% 100%, 0% 100%);
+
+}
+
+
+.clip-path-tl-bl {
+clip-path: polygon(0 25%, 100% 0, 100% 100%, 0 75%);
+}
+
+.clip-path-circle {
+  clip-path: circle(20% at 50% 50%);
+}
+
+.clip-path-triangle-left {
+clip-path: polygon(100% 0%, 0% 100%, 100% 100%);
+}
+
+.clip-path-triangle-right {
+  clip-path: polygon(100% 0, 0 0, 100% 100%);
+}
+
+.clip-path-triangle-rb {
+  clip-path: polygon(100% 100%, 0 0, 0 100%);
+}
+
+.clip-path-arrow-right {
+clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

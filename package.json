@@ -1,5 +1,5 @@
 {
-  "name": "portfolio",
+  "name": "restarts-corporate",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -15,9 +15,12 @@
     "@types/react-dom": "18.0.8",
     "eslint": "8.27.0",
     "eslint-config-next": "13.0.2",
+    "microcms-js-sdk": "^2.3.2",
     "next": "12.3.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-icons": "^4.6.0",
+    "react-intersection-observer": "^9.4.1",
     "react-modern-drawer": "^1.1.2",
     "react-scroll": "^1.8.8",
     "typescript": "4.8.4"

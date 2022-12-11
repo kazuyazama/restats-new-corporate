@@ -1,5 +1,6 @@
 import Header from "./Header";
 import Footer from "./Footer";
+import TopScroll from "../Organisms/TopScroll";
 import { ReactElement } from "react";
 
 type LayoutProps = Required<{
@@ -12,6 +13,7 @@ const Layout = ({ children }: LayoutProps) => {
       <Header />
       <main>{children}</main>
       <Footer />
+      <TopScroll showBelow={620} />
     </>
   );
 };
