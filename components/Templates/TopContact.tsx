@@ -5,26 +5,30 @@ import TopTitleText from "../Atoms/TopTitleText";
 
 const TopContact = () => {
   return (
-    <div className=" py-40 bg-gray-200">
-      <div className="grid grid-cols-2  max-w-screen-xl mx-auto items-center ">
+      <div className="grid grid-cols-2  max-w-screen-xl mx-auto items-center relative">
         <div className=" ">
-       <TopTitleText title="Contact" after="お問い合わせ" />
+       <TopTitleText after="after:content-['お問い合わせ']" top="top-0">Contact</TopTitleText>
     
 
         </div>
         <div className="group flex items-center justify-center">
 
-          <div className="w-1/2 h-20 bg-secondary flex items-center justify-center cursor-pointer group-hover:bg-accent duration-300 ">
-            <div className="z-10">
-        <MoreButton borderWidth="before:w-32" color="white" path="/company" >お問い合わせ</MoreButton>
+          <ContactButton width="w-1/2" height="h-20" path="/contact">
 
-            </div>
+        <MoreButton borderWidth="before:w-32" color="black" path="/company" >お問い合わせ</MoreButton>
 
-          </div>
+
+
+
+          </ContactButton>
+
+          {/* <button className="w-1/2 h-20 rounded-3xl bg-secondary flex items-center justify-center cursor-pointer relative overflow-hidden before:absolute before:w-full before:h-full before:-left-[100%] before:bg-accent  before:inset-0 before:duration-300  before:group-hover:left-0   "> */}
+      
+
+          {/* </button> */}
 
         </div>
       </div>
-    </div>
   );
 };
 

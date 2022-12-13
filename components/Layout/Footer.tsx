@@ -9,7 +9,7 @@ const Footer = () => {
           <Image src="/logos/restarts_logo.webp" width={350} height={90} />
         </div>
 
-        <nav aria-label="Footer Nav" className="">
+        <nav aria-label="Footer Nav" className="font-Roboto">
           <ul className="flex flex-wrap justify-center gap-6 md:gap-8 lg:gap-12">
             <li>
               <a

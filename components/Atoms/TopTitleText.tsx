@@ -1,13 +1,16 @@
+import { ReactNode } from "react";
+
 type Props = {
-    title:string;
+    children:ReactNode & string;
     after:string;
+    top:string;
 }
 
 
-const TopTitleText = ({title,after}:Props) => {
+const TopTitleText = ({children,after,top}:Props) => {
     return (
-        <h1 className={`text-5xl text-start  ml-5 pb-5 after:content-['-${after}'] after:pl-5 after:text-sm after:align-middle`}>
-          {title}
+        <h1 className={`font-Roboto text-5xl tracking-wide ml-5 pb-5 absolute ${top} before:border-b before:w-10 before:border-secondary before:absolute before:bottom-0 ${after} after:text-sm after:align-middle after:ml-5 after:font-NotoSans`}>
+          {children}
         </h1>
     );
 }

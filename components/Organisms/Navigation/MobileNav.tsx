@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const MobileNav = () => {
   return (
-    <nav className="mt-5 w-full">
+    <nav className="mt-5 w-full font-Roboto">
       <ul className=" text-gray-500 leading-loose space-y-2 tracking-wider cursor-pointer ">
         <li className="hover:bg-slate-300">
           <Link href="about">

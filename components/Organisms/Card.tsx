@@ -1,27 +1,37 @@
+import Image from "next/image";
+import Link from "next/link";
+import AnimeImage from "./AnimeImage";
 
 type Props = {
-    title:string;
-    discription:string;
-}
+  title: string;
+  discription: string;
+  src: string;
+  path: string;
+  bg:string;
+  height:string;
+};
 
-const Card = ({title,discription}:Props) => {
-    return (
-        <a href="#" className="block">
-        <img
-          alt="Art"
-          src="https://images.unsplash.com/photo-1605721911519-3dfeb3be25e7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
-          className="h-96 w-full object-cover"
-        />
+const Card = ({ title, discription, src, path,bg,height }: Props) => {
+  return (
+    <>
+      <Link href={`${path}`} className="">
+        <AnimeImage bg={bg} title="" height={height} path={path} />
+   
+        {/* <Image
+          alt={title}
+          src={src}
+          width={500}
+          height={450}
+          layout="responsive"
+          className="object-cover hover:opacity-60"
+        /> */}
+      </Link>
 
-        <h3 className="mt-4 text-xl font-bold text-gray-900">
-        {title}
-        </h3>
+      <h3 className="mt-4 text-xl font-bold text-gray-900">{title}</h3>
 
-        <p className="mt-2 max-w-sm text-gray-700">
-          {discription}
-        </p>
-      </a>
-    );
-}
+      <p className="mt-2 max-w-sm text-gray-700">{discription}</p>
+    </>
+  );
+};
 
 export default Card;

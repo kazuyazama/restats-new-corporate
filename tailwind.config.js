@@ -16,13 +16,23 @@ module.exports = {
         "base-200": "#6da4aa",
       },
       backgroundImage:{
-        'top-background': "url('/topImage-skelton.png')",
-        'machida-background':"url('/machida.webp')"
+        'mainVisual': "url('/topImage-skelton.png')",
+        'machida':"url('/machida.webp')",
+        "manshonwifi":"url('/マンションwifiネット.jpg')",
+        "web-development":"url('/webDevelopment.webp')",
+        "agency":"url('/agency.webp')",
+        "about":"url('/about.webp')"
+
         // 'top-background': "url('/topImage.webp')"  
+      },
+      fontFamily:{
+        NotoSans:["Noto Sans JP","sans-serif"],
+        Roboto:["Roboto","sans-serif"],
+        
       },
       animation: {
        "scale-in-left": "scale-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) forwards",
-       "slide-width-right": "slide-width-right 3s linear  forwards",
+       "slide-width-right": "slide-width-right 3s linear   forwards",
        "slide-trans-right": "slide-trans-right 6s ease-in-out forwards",
        "slide-trans-bottom": "slide-trans-bottom 0.8s ease-in-out  forwards",
       },

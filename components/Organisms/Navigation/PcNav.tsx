@@ -5,7 +5,7 @@ import ListItem from "../../Atoms/ListItem";
 
 const PcNav = () => {
   return (
-    <nav>
+    <nav className="font-Roboto">
       <ul
         className={`flex justify-evenly gap-10 items-center cursor-pointer  text-gray-100 `}
       >
@@ -25,8 +25,8 @@ const PcNav = () => {
           PARTNER
         </ListItem>
 
-        <li>
-          <ContactButton>CONTACT</ContactButton>
+        <li className="w-40">
+          <ContactButton path="/contact">CONTACT</ContactButton>
         </li>
       </ul>
     </nav>

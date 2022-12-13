@@ -24,7 +24,7 @@ export const getStaticProps = async () => {
 };
 
 export default function Home({ data }: { data: Banner }) {
-  const domRef = useRef<HTMLElement>(null);
+  // const domRef = useRef<HTMLElement>(null);
 
   const [isOpening, setIsOpening] = useState(true);
   const [isOpeningText, setIsOpeningText] = useState(false);
@@ -57,20 +57,20 @@ export default function Home({ data }: { data: Banner }) {
 
         <span className="absolute w-full h-64 -mt-64 clip-path-triangle-left bg-gray-200"></span>
 
-        <section id="about" className="">
+        <section id="about" className="py-20 bg-gray-200 ">
           <TopAbout />
         </section>
 
         <span className="absolute w-full h-64 mb-64 clip-path-triangle-right bg-gray-200"></span>
         {/* <span className="absolute w-full h-64 mb-64  clip-path-triangle-rb bg-white"></span> */}
 
-        <section id="profile" className="">
+        <section id="profile" className="py-96">
           <TopService />
         </section>
 
         <span className="absolute w-full h-64 -mt-64 clip-path-triangle-left bg-gray-200"></span>
 
-        <section id="works" className="">
+        <section id="works" className="py-40   bg-gray-200">
           <TopCompany />
         </section>
 
@@ -82,7 +82,7 @@ export default function Home({ data }: { data: Banner }) {
 
         <span className="absolute w-full h-64 -mt-64 clip-path-triangle-left bg-gray-200"></span>
 
-        <section id="contact" className="">
+        <section id="contact" className=" py-40 bg-gray-200">
           <TopContact />
         </section>
 
