@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -6,54 +7,54 @@ const Footer = () => {
       <div className="mx-auto max-w-screen-xl space-y-8 flex flex-col justify-center items-center ">
         <div className="">
 
-          <Image src="/logos/restarts_logo.webp" width={350} height={90} />
+          <Image loader={({src}) => src}  src="/logos/restarts_logo.webp" width={350} height={90} />
         </div>
 
         <nav aria-label="Footer Nav" className="font-Roboto">
           <ul className="flex flex-wrap justify-center gap-6 md:gap-8 lg:gap-12">
             <li>
-              <a
+              <Link
                 className="text-gray-700 transition hover:text-gray-700/75"
                 href="/"
               >
                 About
-              </a>
+              </Link>
             </li>
 
             <li>
-              <a
+              <Link
                 className="text-gray-700 transition hover:text-gray-700/75"
                 href="/"
               >
                 Service
-              </a>
+              </Link>
             </li>
 
             <li>
-              <a
+              <Link
                 className="text-gray-700 transition hover:text-gray-700/75"
                 href="/"
               >
                 Company
-              </a>
+              </Link>
             </li>
 
             <li>
-              <a
+              <Link
                 className="text-gray-700 transition hover:text-gray-700/75"
                 href="/"
               >
                 Partner
-              </a>
+              </Link>
             </li>
 
             <li>
-              <a
+              <Link
                 className="text-gray-700 transition hover:text-gray-700/75"
                 href="/"
               >
                 Contact
-              </a>
+              </Link>
             </li>
 
             

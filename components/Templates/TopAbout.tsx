@@ -26,7 +26,7 @@ const TopAbout = () => {
         <div className="bg-about bg-cover bg-no-repeat bg-center w-[50vw] h-[60vh]  rounded-l-3xl  flex justify-center relative">
         
           <div className="absolute -bottom-40 left-20 2xl:left-32 z-30">
-          <Image src="/about.webp" width={200} height={200}  className="rounded-2xl"  />
+          <Image loader={({src}) => src} src="/about.webp" width={200} height={200}  className="rounded-2xl"  />
 
           </div>
 

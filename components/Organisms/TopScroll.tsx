@@ -13,7 +13,7 @@ const TopScroll = ({ showBelow }: { showBelow: number }) => {
     } else {
       setShow(false);
     }
-  }, []);
+  }, [showBelow]);
 
   const handleClick = () => {
     window[`scrollTo`]({ top: 0, behavior: `smooth` });
@@ -24,7 +24,7 @@ const TopScroll = ({ showBelow }: { showBelow: number }) => {
       window.addEventListener(`scroll`, handleScroll);
       return () => window.removeEventListener(`scroll`, handleScroll);
     }
-  }, [handleScroll]);
+  }, [showBelow,handleScroll]);
 
   return (
     <>

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import Navigation from "../Organisms/Navigation";
 
 const Header = ({ scrollRef }: any) => {
@@ -12,12 +13,12 @@ const Header = ({ scrollRef }: any) => {
           // }`}
         >
           <div className="flex items-center justify-between max-w-screen-xl mx-auto">
-            <a
+            <Link
               href="/"
               className="text-xl font-bold text-gray-100 lg:text-3xl order-last lg:order-first cursor-pointer"
             >
-                <Image src="/logos/restats_logo_only.webp" width={80} height={60} />
-            </a>
+                <Image loader={({src}) => src} src="/logos/restats_logo_only.webp" width={80} height={60} objectFit="contain" />
+            </Link>
             <div className="">
               <Navigation />
             </div>

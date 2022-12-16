@@ -1,14 +1,18 @@
 import Link from "next/link";
 import { MdKeyboardArrowRight } from "react-icons/md";
 
-const Breadcrumbs = () => {
+type Props = {
+  title:string;
+}
+
+const Breadcrumbs = ({title}:Props) => {
     return (
         <div className="flex items-center gap-1">
         <Link href="/">
           <a className="">TOP</a>
         </Link>
         <MdKeyboardArrowRight />
-        <span>service</span>
+        <span>{title}</span>
       </div>
     );
 }

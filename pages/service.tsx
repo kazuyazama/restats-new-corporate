@@ -1,13 +1,13 @@
 import MoreButton from "../components/Atoms/MoreButton";
 import TopTitleText from "../components/Atoms/TopTitleText";
 import ServiceItem from "../components/Organisms/ServiceItem";
-import ServiceTitle from "../components/ServiceTitle";
+import ServiceTitle from "../components/Organisms/ServiceTitle";
 
 const service = () => {
   return (
     <div className="overflow-hidden">
       <section className="">
-        <ServiceTitle />
+        <ServiceTitle title="SERVICE" discription="弊社で行なっているサービスを紹介します" />
 
       </section>
 
@@ -54,7 +54,7 @@ const service = () => {
         <ServiceItem
           title="代理店事業"
           after="after:content-['大手キャリア様の販売代理店として活動をしています']"
-          path="/"
+          
           image="bg-agency"
           
         >

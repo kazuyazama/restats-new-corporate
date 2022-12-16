@@ -51,7 +51,7 @@ export default function Home({ data }: { data: Banner }) {
       {/* <Opening isOpening={isOpening} isOpeningText={isOpeningText} /> */}
 
       <div className="overflow-hidden ">
-        <section className="">
+        <section className="h-[50vh] md:h-[100vh] bg-primary ">
           <Top />
         </section>
 
