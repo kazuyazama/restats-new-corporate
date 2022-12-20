@@ -18,10 +18,13 @@ module.exports = {
       backgroundImage:{
         'mainVisual': "url('/topImage-skelton.png')",
         'machida':"url('/machida.webp')",
+        'machida2':"url('/machida2.webp')",
         "manshonwifi":"url('/マンションwifiネット.jpg')",
         "web-development":"url('/webDevelopment.webp')",
         "agency":"url('/agency.webp')",
-        "about":"url('/about.webp')"
+        "about":"url('/about.webp')",
+        "topVisual":"url('/topVisual.webp')",
+        "bg-main":"url('/paku1210A1127_TP_V4.jpg')"
 
         // 'top-background': "url('/topImage.webp')"  
       },

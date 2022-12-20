@@ -1,30 +1,18 @@
 import { ReactElement, useCallback, useEffect, useRef, useState } from "react";
-import { Link as Scroll } from "react-scroll";
 
 import { MdKeyboardArrowUp } from "react-icons/md";
+import useScrollVisible from "../../hooks/useScrollVisible";
 
-const TopScroll = ({ showBelow }: { showBelow: number }) => {
-  const [show, setShow] = useState(showBelow ? false : true);
-  
+type Props = {
+  showBelow:number;
+  offset:number;
+}
 
-  const handleScroll = useCallback(() => {
-    if (window.pageYOffset > showBelow) {
-      setShow(true);
-    } else {
-      setShow(false);
-    }
-  }, [showBelow]);
 
-  const handleClick = () => {
-    window[`scrollTo`]({ top: 0, behavior: `smooth` });
-  };
+const TopScroll = ({ showBelow,offset }:Props) => {
 
-  useEffect(() => {
-    if (showBelow) {
-      window.addEventListener(`scroll`, handleScroll);
-      return () => window.removeEventListener(`scroll`, handleScroll);
-    }
-  }, [showBelow,handleScroll]);
+  const {show,handleClick} = useScrollVisible({showBelow,offset})
+
 
   return (
     <>

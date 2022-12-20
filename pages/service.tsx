@@ -1,5 +1,3 @@
-import MoreButton from "../components/Atoms/MoreButton";
-import TopTitleText from "../components/Atoms/TopTitleText";
 import ServiceItem from "../components/Organisms/ServiceItem";
 import ServiceTitle from "../components/Organisms/ServiceTitle";
 
@@ -28,6 +26,7 @@ const service = () => {
           それ故に、希望としている回線や適正な回線を選択できないことが多くありました。
           それを解決したのがマンションwifiネットです。
         </ServiceItem>
+        
       </section>
 
       <span className="absolute w-full h-64 mb-64 clip-path-triangle-right bg-gray-200"></span>

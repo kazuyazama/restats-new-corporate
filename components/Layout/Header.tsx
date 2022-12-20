@@ -5,7 +5,7 @@ import Navigation from "../Organisms/Navigation";
 const Header = ({ scrollRef }: any) => {
   return (
     <>
-      <header aria-label="Page Header" id="top" ref={scrollRef}>
+      <header aria-label="Page Header " id="top" ref={scrollRef}  >
         <div
           className="w-full bg-primary p-5 "
           // className={`w-full fixed z-30 mx-auto p-5 lg:p-8 ${

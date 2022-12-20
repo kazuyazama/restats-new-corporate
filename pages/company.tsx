@@ -1,46 +1,73 @@
-import { link } from "fs";
+import React from "react";
+import { GoogleMap, LoadScript, MarkerF } from "@react-google-maps/api";
 import TopTitleText from "../components/Atoms/TopTitleText";
-import ServiceItem from "../components/Organisms/ServiceItem";
 import ServiceTitle from "../components/Organisms/ServiceTitle";
 import Table from "../components/Organisms/Table";
+import PrimaryButton from "../components/Atoms/PrimaryButton";
+
+const API_KEY = process.env.NEXT_PUBLIC_GOOGLE_MAP_API_KEY;
+
+const profile = [
+  {
+    title: "社名",
+    discription: ["株式会社リ・スターツ"],
+  },
+  {
+    title: "所在地",
+    discription: [
+      "東京本社：東京都町田市森野6-359 横山第二​ビル 2-A",
+      "京都支店：京都府京田辺市三山木垣ノ内69 大隅ビル 203",
+    ],
+  },
+  {
+    title: "設立",
+    discription: ["2020年9月30日"],
+  },
+  {
+    title: "資本金",
+    discription: ["3,000,000円"],
+  },
+  {
+    title: "事業内容",
+    discription: ["マンションwifiネット", "web開発", "代理店事業"],
+  },
+  {
+    title: "代表取締役",
+    discription: ["座間 和也"],
+  },
+  {
+    title: "従業員数　",
+    discription: ["８名（業務委託含む）"],
+  },
+  {
+    title: "TEL",
+    discription: ["042-866-3979（代表）"],
+  },
+];
 
 const company = () => {
-  const profile = [
-    {
-      title: "社名",
-      discription: ["株式会社リ・スターツ"],
-    },
-    {
-      title: "所在地",
-      discription: [
-        "東京本社：東京都町田市森野6-359 横山第二​ビル 2-A",
-        "京都支店：京都府京田辺市三山木垣ノ内69 大隅ビル 203",
-      ],
 
-      // tokyo: "東京都",
-      // kyoto: "京都",
-    },
-    {
-      title: "設立",
-      discription: ["2020年9月30日"],
-    },
-    {
-      title: "資本金",
-      discription: ["3,000,000円"],
-    },
-    {
-      title: "事業内容",
-      discription: ["マンションwifiネット", "web開発", "代理店事業"],
-    },
-    {
-      title: "代表取締役",
-      discription: ["座間 和也"],
-    },
-    {
-      title: "従業員数　",
-      discription: ["８名（業務委託含む）"],
-    },
-  ];
+  //@react-google-maps/api の設定
+  const containerStyle = {
+    height: "60vh",
+    width: "100%",
+    borderRadius: "1.5rem",
+  };
+
+  const center = {
+    lat: 35.776072247629266,
+    lng: 137.81963278291485,
+  };
+
+  const tokyo = {
+    lat: 35.55086933132063,
+    lng: 139.43185558163188,
+  };
+
+  const kyoto = {
+    lat: 34.805139983575174,
+    lng: 135.77838432442095,
+  };
 
   return (
     <div className="overflow-hidden">
@@ -64,35 +91,56 @@ const company = () => {
           <TopTitleText top="top-0" after="after:content-['アクセス']">
             ACCESS
           </TopTitleText>
+
+          <div className="py-32 grid grid-cols-2 gap-14">
+            <div className="w-full">
+              <h1 className="py-5 text-4xl font-Roboto ">TOKYO OFFICE</h1>
+              <LoadScript googleMapsApiKey={`${API_KEY}`}>
+                <GoogleMap
+                  mapContainerStyle={containerStyle}
+                  center={tokyo}
+                  zoom={15}
+                >
+                  <MarkerF position={tokyo} />
+                </GoogleMap>
+              </LoadScript>
+
+              <div className="flex justify-between pt-5 items-center">
+                <div>
+                  <p>〒194-0022</p>
+                  <p>東京都町田市森野6-359 横山第2ビル 2-A</p>
+                </div>
+                  <PrimaryButton src="https://goo.gl/maps/MyTNBUGffaRSNDdT8">Googleマップを見る</PrimaryButton>
+              </div>
+            </div>
+            <div className="w-full">
+              <h1 className="py-5 text-4xl font-Roboto ">KYOTO OFFICE</h1>
+              <LoadScript googleMapsApiKey={`${API_KEY}`}>
+                <GoogleMap
+                  mapContainerStyle={containerStyle}
+                  center={kyoto}
+                  zoom={15}
+                >
+                  <MarkerF position={kyoto} />
+                </GoogleMap>
+              </LoadScript>
+              <div className="flex justify-between pt-5 items-center">
+                <div>
+                  <p>〒610-0313</p>
+                  <p>京都府京田辺市三山木垣ノ内６９ 大隈ビル 203</p>
+                </div>
+                  <PrimaryButton src="https://goo.gl/maps/p1i8nubhfpc7Wzap8">Googleマップを見る</PrimaryButton>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
-      <span className="absolute w-full h-64 -mt-64 clip-path-triangle-left bg-gray-200"></span>
+      <span className="absolute w-full h-64 -mt-64 clip-path-triangle-left bg-gray-100"></span>
 
-      <section id="works" className="py-40 bg-gray-200">
-        <ServiceItem
-          title="代理店事業"
-          after="after:content-['大手キャリア様の販売代理店として活動をしています']"
-          image="bg-agency"
-        >
-          主にビッグローブ光、NURO光をはじめとした大手キャリア様の販売代理店として活動をしています。
-          <br />
-          私たちはこの代理店業界において、10年以上携わっているプロフッショナル集団です。50社以上の企業様と業務委託契約を交わし、販売網を構築しています。
-          その経験から円滑で適正なソリューションをお約束します。
-        </ServiceItem>
-      </section>
+     
 
-      <span className="absolute w-full h-64 mb-64 clip-path-triangle-right bg-gray-200"></span>
 
-      {/* <section id="contact" className="">
-        </section>
-
-        <span className="absolute w-full h-64 -mt-64 clip-path-triangle-left bg-gray-200"></span>
-
-        <section id="contact" className="">
-        </section>
-
-        <span className="absolute w-full h-64 mb-64 clip-path-triangle-right bg-gray-200"></span> */}
     </div>
   );
 };

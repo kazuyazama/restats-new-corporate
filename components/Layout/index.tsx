@@ -13,7 +13,7 @@ const Layout = ({ children }: LayoutProps) => {
       <Header />
       <main>{children}</main>
       <Footer />
-      <TopScroll showBelow={620} />
+      <TopScroll showBelow={620} offset={0} />
     </>
   );
 };

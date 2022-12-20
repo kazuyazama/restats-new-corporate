@@ -1,14 +1,15 @@
+import { useEffect, useRef, useState } from "react";
 import Ad from "../components/Organisms/Ad";
 import { Banner } from "../types/banner";
 import { client } from "../libs/client.js";
 import Top from "../components/Organisms/Top";
-import { useEffect, useRef, useState } from "react";
 import Opening from "../components/Organisms/Opening";
 import TopAbout from "../components/Templates/TopAbout";
 import TopService from "../components/Templates/TopService";
 import TopCompany from "../components/Templates/TopCompany";
 import TopContact from "../components/Templates/TopContact";
 import TopParther from "../components/Templates/TopPartner";
+import Particle from "../components/Particle";
 
 export const getStaticProps = async () => {
   const data = await client.get({
@@ -28,6 +29,8 @@ export default function Home({ data }: { data: Banner }) {
 
   const [isOpening, setIsOpening] = useState(true);
   const [isOpeningText, setIsOpeningText] = useState(false);
+
+  //オープニングアニメーションを出す為に通常Layoutを2秒遅らせる
 
   useEffect(() => {
     const timeOut = () => {
@@ -50,14 +53,16 @@ export default function Home({ data }: { data: Banner }) {
     <>
       {/* <Opening isOpening={isOpening} isOpeningText={isOpeningText} /> */}
 
-      <div className="overflow-hidden ">
-        <section className="h-[50vh] md:h-[100vh] bg-primary ">
+      <div className=" ">
+        <Particle />
+
+        <section className="h-[50vh] md:h-[100vh] bg-machida2  bg-cover -mt-28">
           <Top />
         </section>
 
-        <span className="absolute w-full h-64 -mt-64 clip-path-triangle-left bg-gray-200"></span>
+        <span className="absolute w-full h-48 -mt-48 clip-path-triangle-left bg-gray-200"></span>
 
-        <section id="about" className="py-20 bg-gray-200 ">
+        <section id="about" className="py-20 bg-gray-200  ">
           <TopAbout />
         </section>
 

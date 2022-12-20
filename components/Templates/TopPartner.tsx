@@ -1,4 +1,3 @@
-import Card from "../Organisms/Card";
 
 const TopParther = () => {
   return (

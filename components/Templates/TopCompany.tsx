@@ -1,9 +1,4 @@
-import Image from "next/image";
-import Link from "next/link";
-import ArrowButton from "../Atoms/ArrowButton";
-import ContactButton from "../Atoms/ContactButton";
-import MoreButton from "../Atoms/MoreButton";
-import PrimaryButton from "../Atoms/PrimaryButton";
+
 import TopTitleText from "../Atoms/TopTitleText";
 import AnimeImage from "../Organisms/AnimeImage";
 

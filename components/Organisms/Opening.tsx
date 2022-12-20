@@ -11,11 +11,11 @@ const Opening = ({ isOpening, isOpeningText }: Props) => {
       } `}
     >
       <p
-        className={` fixed overflow-x-hidden top-1/2 z-[1000] left-1/2 -translate-x-[320px] w-0  whitespace-nowrap overflow-hidden text-secondary tracking-wider text-5xl font-semibold   ${
+        className={` fixed overflow-x-hidden top-1/2 z-[1000] left-1/2 -translate-x-[200px] w-0  whitespace-nowrap overflow-hidden text-secondary tracking-wider text-5xl font-semibold   ${
           isOpeningText && "animate-slide-width-right"
         } `}
       >
-        成功するまで挑戦し続ける
+        町田から世界へ
       </p>
     </div>
   );

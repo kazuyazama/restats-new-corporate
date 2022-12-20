@@ -1,8 +1,6 @@
 import Image from "next/image";
-import { useRouter } from "next/router";
 import TopTitleText from "../components/Atoms/TopTitleText";
 import AboutItem from "../components/Organisms/AboutItem";
-import ServiceItem from "../components/Organisms/ServiceItem";
 import ServiceTitle from "../components/Organisms/ServiceTitle";
 
 const about = () => {
