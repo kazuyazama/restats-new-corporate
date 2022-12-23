@@ -56,7 +56,7 @@ export default function Home({ data }: { data: Banner }) {
       <div className=" ">
         <Particle />
 
-        <section className="h-[50vh] md:h-[100vh] bg-machida2  bg-cover -mt-28">
+        <section className="h-[50vh] md:h-[100vh] bg-machida2  bg-cover -mt-28 before:h-full before:w-full ">
           <Top />
         </section>
 

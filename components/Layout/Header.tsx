@@ -2,10 +2,10 @@ import Image from "next/image";
 import Link from "next/link";
 import Navigation from "../Organisms/Navigation";
 
-const Header = ({ scrollRef }: any) => {
+const Header = () => {
   return (
     <>
-      <header aria-label="Page Header " id="top" ref={scrollRef}  >
+      <header aria-label="Page Header " id="top"  >
         <div
           className="w-full bg-primary p-5 "
           // className={`w-full fixed z-30 mx-auto p-5 lg:p-8 ${

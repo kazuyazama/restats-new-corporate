@@ -1,18 +1,23 @@
-import { ReactNode } from "react";
 
 type Props = {
-  children:ReactNode;
   toggleDrawer:() => void;
+  isOpen:boolean;
+  controls:string
 }
 
-const OpenMobileButton = ({toggleDrawer,children}:Props) => {
+const OpenMobileButton = ({toggleDrawer,isOpen,controls}:Props) => {
     return (
-        <button
-        type="button"
-        onClick={toggleDrawer}
-        className="rounded-md bg-black bg-opacity-20 px-4 py-2 text-sm font-medium text-white hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75"
-      >
-        {children}
+     
+
+      <button aria-expanded={isOpen} aria-controls={controls} className="relative group z-[9999] ">
+      <div className=" relative flex overflow-hidden items-center justify-center rounded-full w-[50px] h-[50px] transform transition-all bg-white-700 duration-200 shadow-md">
+        <div onClick={toggleDrawer}  className="flex flex-col justify-between w-[20px] h-[20px] transform transition-all duration-300 origin-center overflow-hidden">
+          <div className={`bg-white h-[2px] w-7 transform transition-all duration-300 origin-left group-aria-expanded:rotate-[42deg]`}></div>
+          <div className={`bg-white h-[2px] w-1/2 rounded transform transition-all duration-300  group-aria-expanded:-translate-x-10`}></div>
+          <div className={`bg-white h-[2px] w-7 transform transition-all duration-300 origin-left group-aria-expanded:rotate-[-42deg]`}></div>
+
+        </div>
+      </div>
       </button>
     );
 }

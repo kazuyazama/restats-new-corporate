@@ -6,6 +6,8 @@ import OpenMobileButton from "../../Atoms/OpenMobileButton";
 import MobileNav from "./MobileNav";
 import CloseMobileButton from "../../Atoms/CloseMobileButton";
 import type { FC } from "react";
+import { GiHamburgerMenu } from "react-icons/gi"
+
 
 const DrawerNav: FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,23 +19,22 @@ const DrawerNav: FC = () => {
   return (
     <>
       <div className="">
-        <OpenMobileButton toggleDrawer={toggleDrawer}>Open</OpenMobileButton>
+        <OpenMobileButton toggleDrawer={toggleDrawer} isOpen={isOpen} controls="navigation" />
       </div>
 
       <Drawer
         open={isOpen}
         onClose={toggleDrawer}
-        direction="left"
-        className="rounded-l rounded-lg"
-        size={220}
+        direction="top"
+        className="opacity-80"
+        style={{height:"100%",width:"100%",backgroundColor:"#0c7eb4"}}
         customIdSuffix="customId"
+
       >
-        <div className=" text-gray-900 flex flex-col items-center justify-between">
+        <div id="navigation" className=" text-gray-900 flex flex-col items-center justify-between">
           <div className="p-4 text-lg font-medium leading-6 flex justify-between items-center space-x-10">
-            <h1>メニュー</h1>
-            <CloseMobileButton toggleDrawer={toggleDrawer} />
           </div>
-          <MobileNav />
+          <MobileNav setIsOpen={setIsOpen} />
         </div>
       </Drawer>
     </>

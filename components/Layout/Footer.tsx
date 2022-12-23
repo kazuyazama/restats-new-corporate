@@ -17,7 +17,7 @@ const Footer = () => {
                 className="text-gray-700 transition hover:text-gray-700/75"
                 href="/"
               >
-                About
+                ABOUT
               </Link>
             </li>
 
@@ -26,7 +26,7 @@ const Footer = () => {
                 className="text-gray-700 transition hover:text-gray-700/75"
                 href="/"
               >
-                Service
+                SERVICE
               </Link>
             </li>
 
@@ -35,7 +35,7 @@ const Footer = () => {
                 className="text-gray-700 transition hover:text-gray-700/75"
                 href="/"
               >
-                Company
+                COMPANY
               </Link>
             </li>
 
@@ -44,7 +44,7 @@ const Footer = () => {
                 className="text-gray-700 transition hover:text-gray-700/75"
                 href="/"
               >
-                Partner
+                PARTNER
               </Link>
             </li>
 
@@ -53,7 +53,16 @@ const Footer = () => {
                 className="text-gray-700 transition hover:text-gray-700/75"
                 href="/"
               >
-                Contact
+                CONTACT
+              </Link>
+            </li>
+
+            <li>
+              <Link
+                className="text-gray-700 transition hover:text-gray-700/75"
+                href="privacy"
+              >
+                PRIVACT POLICY
               </Link>
             </li>
 

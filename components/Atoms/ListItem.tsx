@@ -9,10 +9,9 @@ type Props = {
 };
 
 const ListItem = ({ borderWidth, children, to }: Props) => {
-
   const router = useRouter();
 
-  const underLine = `${borderWidth} before:border-b before:border-secondary before:absolute before:top-8`
+  const underLine = `${borderWidth} before:border-b before:border-secondary before:absolute before:top-8`;
 
   return (
     <>
