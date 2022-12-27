@@ -4,16 +4,16 @@ import Card from "../Organisms/Card";
 
 const TopService = () => {
   return (
-      <div className="grid grid-cols-3 gap-8 max-w-screen-xl mx-auto items-center  relative">
+      <div className="grid lg:grid-cols-3 gap-20 lg:gap-8 max-w-screen-xl mx-auto items-center relative mt-20">
        <TopTitleText after="after:content-['事業内容']" top="-top-32">Service</TopTitleText>
-        <div className="relative">
+        <div className="relative ">
           <Card
             title="マンションwifiネット"
             discription="日本で唯一の集合住宅向けインターネット回線検索ポータルサイト。マンションwifiネットを運営しています"
             src="/マンションwifiネット.jpg"
             path="/service"
             bg="bg-manshonwifi"
-            height="h-[47vh]"
+            height="h-[30vh] lg:h-[47vh] "
           />
           <div className="absolute right-0 -bottom-10 -translate-x-12">
           <MoreButton
@@ -35,7 +35,7 @@ const TopService = () => {
             src="/webDevelopment.webp"
             path="/service"
             bg="bg-web-development"
-            height="h-[47vh]"
+            height="h-[30vh] lg:h-[47vh]"
           />
            <div className="absolute right-0 -bottom-10 -translate-x-12">
           <MoreButton
@@ -56,7 +56,7 @@ const TopService = () => {
             src="/agency.webp"
             path="/service"
             bg="bg-agency"
-            height="h-[47vh]"
+            height="h-[30vh] lg:h-[47vh]"
           />
            <div className="absolute right-0 -bottom-10 -translate-x-12">
           <MoreButton

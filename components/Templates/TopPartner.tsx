@@ -1,3 +1,4 @@
+import Chatgpt from "../Chatgpt";
 
 const TopParther = () => {
   return (
@@ -5,6 +6,7 @@ const TopParther = () => {
       <h1 className="text-5xl text-start ml-5 pb-5">partner</h1>
       <div className="grid grid-cols-3 gap-6  ">
         <div className="">
+          <Chatgpt />
         </div>
         <div className="">
         </div>

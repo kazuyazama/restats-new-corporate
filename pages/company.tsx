@@ -4,8 +4,8 @@ import TopTitleText from "../components/Atoms/TopTitleText";
 import ServiceTitle from "../components/Organisms/ServiceTitle";
 import Table from "../components/Organisms/Table";
 import PrimaryButton from "../components/Atoms/PrimaryButton";
+import GoogleMaps from "../components/Atoms/GoogleMaps";
 
-const API_KEY = process.env.NEXT_PUBLIC_GOOGLE_MAP_API_KEY;
 
 const profile = [
   {
@@ -45,37 +45,34 @@ const profile = [
   },
 ];
 
+ //@react-google-maps/api の設定
+
+ const center = {
+  lat: 35.776072247629266,
+  lng: 137.81963278291485,
+};
+
+const tokyo = {
+  lat: 35.55086933132063,
+  lng: 139.43185558163188,
+};
+
+const kyoto = {
+  lat: 34.805139983575174,
+  lng: 135.77838432442095,
+};
+
 const company = () => {
 
-  //@react-google-maps/api の設定
-  const containerStyle = {
-    height: "60vh",
-    width: "100%",
-    borderRadius: "1.5rem",
-  };
 
-  const center = {
-    lat: 35.776072247629266,
-    lng: 137.81963278291485,
-  };
-
-  const tokyo = {
-    lat: 35.55086933132063,
-    lng: 139.43185558163188,
-  };
-
-  const kyoto = {
-    lat: 34.805139983575174,
-    lng: 135.77838432442095,
-  };
 
   return (
-    <div className="overflow-hidden">
-      <section className="">
+    <div className="overflow-hidden ">
+      <section className="px-5 mt-20 lg:mt-0 bg-primary">
         <ServiceTitle title="COMPANY" discription="企業情報" />
       </section>
 
-      <span className="absolute w-full h-64 -mt-64 clip-path-triangle-left bg-gray-200"></span>
+      <span className="absolute w-full h-32 -mt-32 lg:h-64 lg:-mt-64 clip-path-triangle-left bg-gray-200"></span>
 
       <section id="about" className="py-40 bg-gray-200 ">
         <div className="max-w-screen-xl mx-auto relative">
@@ -83,29 +80,21 @@ const company = () => {
         </div>
       </section>
 
-      <span className="absolute w-full h-64 mb-64 clip-path-triangle-right bg-gray-200"></span>
+      <span className="absolute w-full h-32 mb-64 lg:h-64 lg:mb-64 clip-path-triangle-right bg-gray-200"></span>
       {/* <span className="absolute w-full h-64 mb-64  clip-path-triangle-rb bg-white"></span> */}
 
-      <section id="profile" className="py-80">
+      <section id="profile" className="py-80 px-5">
         <div className="max-w-screen-xl mx-auto relative">
           <TopTitleText top="top-0" after="after:content-['アクセス']">
             ACCESS
           </TopTitleText>
 
-          <div className="py-32 grid grid-cols-2 gap-14">
+          <div className="py-32 grid lg:grid-cols-2 gap-14">
             <div className="w-full">
               <h1 className="py-5 text-4xl font-Roboto ">TOKYO OFFICE</h1>
-              <LoadScript googleMapsApiKey={`${API_KEY}`}>
-                <GoogleMap
-                  mapContainerStyle={containerStyle}
-                  center={tokyo}
-                  zoom={15}
-                >
-                  <MarkerF position={tokyo} />
-                </GoogleMap>
-              </LoadScript>
+             <GoogleMaps city={tokyo} />
 
-              <div className="flex justify-between pt-5 items-center">
+              <div className="flex flex-col lg:flex-row justify-between pt-5 items-center gap-5 lg:gap-0">
                 <div>
                   <p>〒194-0022</p>
                   <p>東京都町田市森野6-359 横山第2ビル 2-A</p>
@@ -115,16 +104,8 @@ const company = () => {
             </div>
             <div className="w-full">
               <h1 className="py-5 text-4xl font-Roboto ">KYOTO OFFICE</h1>
-              <LoadScript googleMapsApiKey={`${API_KEY}`}>
-                <GoogleMap
-                  mapContainerStyle={containerStyle}
-                  center={kyoto}
-                  zoom={15}
-                >
-                  <MarkerF position={kyoto} />
-                </GoogleMap>
-              </LoadScript>
-              <div className="flex justify-between pt-5 items-center">
+              <GoogleMaps city={kyoto} />
+              <div className="flex flex-col lg:flex-row justify-between pt-5 items-center gap-5 lg:gap-0">
                 <div>
                   <p>〒610-0313</p>
                   <p>京都府京田辺市三山木垣ノ内６９ 大隈ビル 203</p>
@@ -136,7 +117,7 @@ const company = () => {
         </div>
       </section>
 
-      <span className="absolute w-full h-64 -mt-64 clip-path-triangle-left bg-gray-100"></span>
+      <span className="absolute w-full h-32 -mt-32 lg:h-64 lg:-mt-64 clip-path-triangle-left bg-gray-100"></span>
 
      
 
@@ -144,5 +125,7 @@ const company = () => {
     </div>
   );
 };
+
+
 
 export default company;

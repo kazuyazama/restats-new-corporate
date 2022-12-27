@@ -14,7 +14,6 @@ type Props = {
 const Card = ({ title, discription, src, path,bg,height }: Props) => {
   return (
     <>
-      <Link href={`${path}`} className="">
         <AnimeImage bg={bg} title="" height={height} path={path} />
    
         {/* <Image
@@ -25,7 +24,6 @@ const Card = ({ title, discription, src, path,bg,height }: Props) => {
           layout="responsive"
           className="object-cover hover:opacity-60"
         /> */}
-      </Link>
 
       <h3 className="mt-4 text-xl font-bold text-gray-900">{title}</h3>
 

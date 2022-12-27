@@ -1,15 +1,8 @@
 import { gsap, Power2,  } from "gsap";
 import { useCallback, useLayoutEffect, useRef } from "react";
 
-import { useGetElementProperty } from "../../hooks/useGetElementProperty";
-import ScrollDown from "../Atoms/ScrollDown";
-import Icon from "public/icon.svg";
-
-import { Container, Engine } from "tsparticles-engine";
-import { loadFull } from "tsparticles";
-import { Alignment, Fit, Layout, useRive } from "@rive-app/react-canvas";
-
 const Top = () => {
+
   const targetRef = useRef(null);
 
   const tl = useRef<gsap.core.Timeline | null>(null);
@@ -62,10 +55,10 @@ const Top = () => {
   }, []);
 
   return (
-    <div className="   ">
-      <div className=" relative ">
-        <div className=" text-white z-10 space-y-4 absolute top-44 right-64 ">
-          <h1 id="h1" className="text-5xl  ">
+    <div className="px-5">
+      <div className=" relative   ">
+        <div className=" text-white z-10 space-y-4 absolute top-44 lg:right-64 w-full ">
+          <h1 id="h1" className="text-3xl lg:text-5xl  ">
             ワクワクを価値あるものに。
           </h1>
           <p id="p">
@@ -79,7 +72,9 @@ const Top = () => {
           <RiveComponent />
         </div> */}
 
-        <ScrollDown offset={800} />
+      
+
+  
       </div>
     </div>
   );

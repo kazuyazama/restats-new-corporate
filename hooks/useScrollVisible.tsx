@@ -1,14 +1,15 @@
-import { useCallback, useEffect, useState } from "react";
+import { VoidCallback } from "@rive-app/react-canvas";
+import { createRef, RefObject, useCallback, useEffect, useState } from "react";
 
 type Props = {
   showBelow?:number;
-  offset:number;
+  offset?:number; 
 }
 
 const useScrollVisible = ({showBelow = 0 ,offset}:Props) => {
 
   const [show, setShow] = useState(showBelow ? false : true);
-  
+ 
   const handleScroll = useCallback(() => {
     if (window.pageYOffset > showBelow) {
       setShow(true);
@@ -20,6 +21,8 @@ const useScrollVisible = ({showBelow = 0 ,offset}:Props) => {
   const handleClick = () => {
     window[`scrollTo`]({ top: offset, behavior: `smooth` });
   };
+
+ 
 
   useEffect(() => {
     if (showBelow) {

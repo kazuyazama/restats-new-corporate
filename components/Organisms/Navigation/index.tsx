@@ -1,16 +1,14 @@
-import BurgerMenu from "./BurgerMenu";
-import MobileNav from "./DrawerNav";
+import MobileNav from "./MobileDrawer";
 import PcNav from "./PcNav";
 
 const index = () => {
     
     return (
         <>
-        <div className="block lg:hidden">
+        <div className="relative lg:hidden   ">
             
-        <MobileNav />
+        {/* <MobileNav  /> */}
 
-        {/* <BurgerMenu    /> */}
         </div>
         <div className="hidden lg:block">
         <PcNav />
