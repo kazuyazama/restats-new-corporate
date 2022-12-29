@@ -2,17 +2,17 @@ import ServiceTitle from "../components/Organisms/ServiceTitle";
 
 const privacy = () => {
   return (
-    <div className="overflow-hidden">
-      <section className="">
+    <div className="overflow-hidden ">
+      <section className="px-5 mt-10 lg:mt-0 bg-primary">
         <ServiceTitle
           title="PLIVACY POLICY"
           discription="プライバシーポリシー"
         />
       </section>
 
-      <span className="absolute w-full h-64 -mt-64 clip-path-triangle-left bg-gray-200"></span>
+      <span className="absolute w-full h-32 -mt-32 lg:h-64 lg:-mt-64 clip-path-triangle-left bg-gray-200"></span>
 
-      <section className="bg-gray-200 py-20">
+      <section className="bg-gray-200 py-20 px-5">
         <div className=" max-w-screen-xl mx-auto">
           <div>
             <h1 className="text-lg pb-10">
@@ -205,7 +205,7 @@ const privacy = () => {
         </div>
       </section>
 
-      <span className="absolute w-full h-64 mb-64 clip-path-triangle-right bg-gray-200 "></span>
+      <span className="absolute w-full h-32 mb-64 lg:h-64 lg:mb-64 clip-path-triangle-right bg-gray-200 "></span>
       {/* <span className="absolute w-full h-64 mb-64  clip-path-triangle-rb bg-white"></span> */}
     </div>
   );

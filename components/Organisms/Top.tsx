@@ -1,8 +1,7 @@
-import { gsap, Power2,  } from "gsap";
+import { gsap, Power2 } from "gsap";
 import { useCallback, useLayoutEffect, useRef } from "react";
 
 const Top = () => {
-
   const targetRef = useRef(null);
 
   const tl = useRef<gsap.core.Timeline | null>(null);
@@ -26,10 +25,7 @@ const Top = () => {
           autoAlpha: 0,
           y: 100,
         }),
-        gsap.set("#circle", {
-          autoAlpha: 0,
-          y: 100,
-        }),
+     
         (tl.current = gsap
           .timeline()
           .to("#h1", {
@@ -56,8 +52,8 @@ const Top = () => {
 
   return (
     <div className="px-5">
-      <div className=" relative   ">
-        <div className=" text-white z-10 space-y-4 absolute top-44 lg:right-64 w-full ">
+      <div className=" relative max-w-screen-xl mx-auto">
+        <div className="pt-28 lg:pt-40 grid place-items-center  text-white z-10 space-y-4 ">
           <h1 id="h1" className="text-3xl lg:text-5xl  ">
             ワクワクを価値あるものに。
           </h1>
@@ -71,10 +67,6 @@ const Top = () => {
         {/* <div className=" h-[95vh]  w-full absolute -top-16 ">
           <RiveComponent />
         </div> */}
-
-      
-
-  
       </div>
     </div>
   );

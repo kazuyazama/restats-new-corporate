@@ -9,23 +9,24 @@ import { ErrorMessage } from "@hookform/error-message";
 import { FormValues } from "../../types/formValues";
 
 type Props = {
-  register: UseFormRegister<FormValues>;
-  errors: Partial<
+  register?: UseFormRegister<FormValues>;
+  errors?: Partial<
     FieldErrorsImpl<{
       [x: string]: any;
     }>
   >;
-  type: string;
+  type?: string;
   id:any;
   placeholder?: string;
 };
 
 const InputText = ({ errors, register, type, id, placeholder }: Props) => {
-  console.log(id);
 
   return (
     <>
-      <input
+      {register ? 
+      <>
+      <input 
         {...register(id, {
           required: "入力が必須の項目です"
         })}
@@ -45,6 +46,16 @@ const InputText = ({ errors, register, type, id, placeholder }: Props) => {
           )
         }
       />
+      </> 
+      :
+      <input 
+        type={type}
+        id={id}
+        placeholder={placeholder}
+        className="w-full py-3 rounded-xl form-input "
+      />
+
+      }
     </>
   );
 };

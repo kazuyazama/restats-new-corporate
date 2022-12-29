@@ -3,8 +3,7 @@ export type FormValues = {
     company:string;
     email: string;
     tel:number;
-    select:Boolean[];
+    select:string[];
     description:string;
     checkbox:boolean;
-
 };

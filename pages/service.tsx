@@ -4,14 +4,14 @@ import ServiceTitle from "../components/Organisms/ServiceTitle";
 const service = () => {
   return (
     <div className="overflow-hidden">
-      <section className="">
+      <section className="px-5 mt-10 lg:mt-0 bg-primary">
         <ServiceTitle title="SERVICE" discription="弊社で行なっているサービスを紹介します" />
 
       </section>
 
-      <span className="absolute w-full h-64 -mt-64 clip-path-triangle-left bg-gray-200"></span>
+      <span className="absolute w-full h-32 -mt-32 lg:h-64 lg:-mt-64 clip-path-triangle-left bg-gray-200"></span>
 
-      <section id="about" className="py-40 bg-gray-200 ">
+      <section id="about" className="py-40 bg-gray-200 px-5 ">
         <ServiceItem
           title="マンションwifiネット"
           after="after:content-['集合住宅向けインターネット回線検索ポータルサイト']"
@@ -29,10 +29,10 @@ const service = () => {
         
       </section>
 
-      <span className="absolute w-full h-64 mb-64 clip-path-triangle-right bg-gray-200"></span>
+      <span className="absolute w-full h-32 mb-64 lg:h-64 lg:mb-64 clip-path-triangle-right bg-gray-200"></span>
       {/* <span className="absolute w-full h-64 mb-64  clip-path-triangle-rb bg-white"></span> */}
 
-      <section id="profile" className="py-80">
+      <section id="profile" className="py-80 px-5">
         <ServiceItem
           title="Web開発"
           after="after:content-['webサイト・webアプリケーション開発']"
@@ -47,9 +47,9 @@ const service = () => {
         </ServiceItem>
       </section>
 
-      <span className="absolute w-full h-64 -mt-64 clip-path-triangle-left bg-gray-200"></span>
+      <span className="absolute w-full h-32 -mt-32 lg:h-64 lg:-mt-64 clip-path-triangle-left bg-gray-200"></span>
 
-      <section id="works" className="py-40 bg-gray-200">
+      <section id="works" className="py-40 px-5 bg-gray-200">
         <ServiceItem
           title="代理店事業"
           after="after:content-['大手キャリア様の販売代理店として活動をしています']"
@@ -65,7 +65,7 @@ const service = () => {
         </ServiceItem>
       </section>
 
-      <span className="absolute w-full h-64 mb-64 clip-path-triangle-right bg-gray-200"></span>
+      <span className="absolute w-full h-32 mb-64 lg:h-64 lg:mb-64 clip-path-triangle-right bg-gray-200"></span>
 
       {/* <section id="contact" className="">
         </section>

@@ -8,15 +8,15 @@ const TopContact = () => {
       <div className=" ">
         <TopTitleText
           after="after:content-['お問い合わせ']"
-          top="-top-16 lg:top-0"
+          top="-top-24 lg:top-0"
         >
           Contact
         </TopTitleText>
       </div>
       <div className="group flex items-center justify-center translate-y-12 lg:translate-y-0 ">
-        <ContactButton width="w-2/3 lg:w-1/2" height="h-20" path="/contact">
+        <ContactButton width="w-2/3 lg:w-1/2" height="h-16 lg:h-20" path="/contact">
           <MoreButton borderWidth="before:w-32" color="black" path="/company">
-            お問い合わせ
+            フォーム
           </MoreButton>
         </ContactButton>
 

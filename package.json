@@ -6,6 +6,7 @@
     "dev": "next dev",
     "ngrok": "next -p 80",
     "build": "next build",
+    "export": "next build && next export",
     "start": "next start",
     "lint": "next lint"
   },
@@ -30,6 +31,7 @@
     "react-modern-drawer": "^1.1.2",
     "react-scroll": "^1.8.8",
     "react-tsparticles": "^2.6.0",
+    "recoil": "^0.7.6",
     "tsparticles": "^2.6.0",
     "tsparticles-engine": "^2.6.0",
     "tsparticles-preset-bubbles": "^2.6.0",

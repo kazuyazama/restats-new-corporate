@@ -14,7 +14,7 @@ type Props = {
 const Card = ({ title, discription, src, path,bg,height }: Props) => {
   return (
     <>
-        <AnimeImage bg={bg} title="" height={height} path={path} />
+        <AnimeImage bg={bg} height={height} path={path} />
    
         {/* <Image
           alt={title}
@@ -27,7 +27,7 @@ const Card = ({ title, discription, src, path,bg,height }: Props) => {
 
       <h3 className="mt-4 text-xl font-bold text-gray-900">{title}</h3>
 
-      <p className="mt-2 max-w-sm text-gray-700">{discription}</p>
+      <p className="mt-2 max-w-sm text-gray-900">{discription}</p>
     </>
   );
 };

@@ -1,5 +1,4 @@
 import React from "react";
-import { GoogleMap, LoadScript, MarkerF } from "@react-google-maps/api";
 import TopTitleText from "../components/Atoms/TopTitleText";
 import ServiceTitle from "../components/Organisms/ServiceTitle";
 import Table from "../components/Organisms/Table";
@@ -68,7 +67,7 @@ const company = () => {
 
   return (
     <div className="overflow-hidden ">
-      <section className="px-5 mt-20 lg:mt-0 bg-primary">
+      <section className="px-5 mt-10 lg:mt-0 bg-primary">
         <ServiceTitle title="COMPANY" discription="企業情報" />
       </section>
 

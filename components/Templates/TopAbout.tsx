@@ -7,13 +7,13 @@ const TopAbout = () => {
       <div className="lg:grid grid-cols-2 items-center gap-8 max-w-screen-xl mx-auto relative -mt-28 lg:mt-0">
           <TopTitleText after="after:content-['私たちについて']" top="top-0">About</TopTitleText>
         <div className="w-full space-y-5 flex flex-col pt-28 lg:pt-0  ">
-          <h3 className="text-2xl ">何度でもリスタートする集団であり続ける。</h3>
+          <h3 className="text-2xl font-semibold ">何度でもリスタートする集団であり続ける。</h3>
           <p>
             多くの人々は失敗することを恐れ、新しいことに挑戦するのを躊躇います。
             ​であれば、失敗しても再出発できる環境を作れば新しいことに挑戦しやすくなるではないか。
             株式会社リ・スターツの由来はここから来ています。
           </p>
-          <div className="absolute -bottom-10 ">
+          <div className="absolute -bottom-10 lg:bottom-40 ">
             <MoreButton
               borderWidth="before:w-[59px]"
               color="black"

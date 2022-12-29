@@ -1,14 +1,9 @@
+import { ReactElement, useState } from "react";
+import "react-modern-drawer/dist/index.css";
 import Header from "./Header";
 import Footer from "./Footer";
 import TopScroll from "../Organisms/TopScroll";
-import { ReactElement, useState } from "react";
-import Drawer from "react-modern-drawer";
-import "react-modern-drawer/dist/index.css";
-import HamburgerMenu from "../Atoms/HamburgerMenu";
-import Drawers from "../Drawers";
-import MobileNav from "../Organisms/Navigation/MobileNav";
-import MobileDrawer from "../Organisms/Navigation/MobileDrawer";
-import { useRouter } from "next/router";
+import MobileDrawer from "../Organisms/MobileDrawer";
 
 type LayoutProps = Required<{
   readonly children: ReactElement;

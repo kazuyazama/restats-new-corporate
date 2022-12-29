@@ -18,7 +18,7 @@ const Table = ({ profile }:{profile:Props}) => {
         </tr>
       </thead>
 
-      <tbody className="">
+      <tbody className="w-full">
         {profile.map((li) => (
           <tr
             key={li.title}
