@@ -70,11 +70,11 @@ export default function Home({ data }: { data: News }) {
 
   return (
     <>
-      {/* <Opening
+      <Opening
         // splitRef={splitRef}
         isOpening={isOpening}
         isOpeningText={isOpeningText}
-      /> */}
+      />
 
       <div className="">
         <Particle />
@@ -100,7 +100,6 @@ export default function Home({ data }: { data: News }) {
 
         <TriangleRight bgColor="bg-gray-200" />
 
-        {/* <span className="absolute w-full h-64 mb-64  clip-path-triangle-rb bg-white"></span> */}
 
         <section
           id="service"
