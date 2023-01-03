@@ -60,7 +60,7 @@ const Top = () => {
           {/* <p id="p" className="text-lg">
             ワクワクをカタチにするだけではなく、価値あるものにしていくクリエイトカンパニーです。
           </p> */}
-          <div className="absolute font-Allura top-80 text-6xl ">From Machida to the World</div>
+          <div className="absolute font-Allura top-40 lg:top-80 text-6xl ">From Machida to the World</div>
 
         </div>
 

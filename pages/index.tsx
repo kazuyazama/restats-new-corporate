@@ -81,7 +81,7 @@ export default function Home({ data }: { data: News }) {
       <div className="">
         <Particle />
 
-        <section className=" overflow-hidden lg:animate-kenburns-top  h-[85vh] md:h-[100vh] bg-machida2  bg-cover bg-center relative -z-20 lg:-mt-28   ">
+        <section className=" overflow-hidden lg:animate-kenburns-top  h-[85vh] lg:h-[100vh] bg-machida2  bg-cover bg-center relative -z-20 lg:-mt-28   ">
           <Top />
         </section>
         <div className="absolute top-[78vh] lg:top-[92vh] right-20 lg:left-[50vw] ">
