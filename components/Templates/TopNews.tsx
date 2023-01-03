@@ -10,7 +10,7 @@ const TopNews = ({ data }: { data: News[] }) => {
         </div>
         <ul className="flex flex-col divide-y">
            {data.map((li) => (
-          <li className="flex flex-col lg:flex-row gap-1 lg:gap-20 py-5">
+          <li key={li.id} className="flex flex-col lg:flex-row gap-1 lg:gap-20 py-5">
             <span>{li.createdAt.split("-").join(".").slice(0,10)}</span>
             <p>{li.title}</p>
           </li>

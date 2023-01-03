@@ -15,40 +15,40 @@ const Top = () => {
   // });
 
   //gsapの実行
-  useLayoutEffect(() => {
-    const ctx = gsap.context(() => {
-      gsap.set("#h1", {
-        autoAlpha: 0,
-        y: 100,
-      }),
-        gsap.set("#p", {
-          autoAlpha: 0,
-          y: 100,
-        }),
+  // useLayoutEffect(() => {
+  //   const ctx = gsap.context(() => {
+  //     gsap.set("#h1", {
+  //       autoAlpha: 0,
+  //       y: 100,
+  //     }),
+  //       gsap.set("#p", {
+  //         autoAlpha: 0,
+  //         y: 100,
+  //       }),
      
-        (tl.current = gsap
-          .timeline()
-          .to("#h1", {
-            y: 0,
-            autoAlpha: 1,
-            duration: 0.8,
-            ease: Power2.easeOut,
-            transformOrigin: "bottom",
-          })
-          .to(
-            "#p",
-            {
-              y: 0,
-              autoAlpha: 1,
-              duration: 0.8,
-              ease: Power2.easeOut,
-            },
-            "-=0.4"
-          ));
-    });
+  //       (tl.current = gsap
+  //         .timeline()
+  //         .to("#h1", {
+  //           y: 0,
+  //           autoAlpha: 1,
+  //           duration: 0.8,
+  //           ease: Power2.easeOut,
+  //           transformOrigin: "bottom",
+  //         })
+  //         .to(
+  //           "#p",
+  //           {
+  //             y: 0,
+  //             autoAlpha: 1,
+  //             duration: 0.8,
+  //             ease: Power2.easeOut,
+  //           },
+  //           "-=0.4"
+  //         ));
+  //   });
 
-    return () => ctx.revert();
-  }, []);
+  //   return () => ctx.revert();
+  // }, []);
 
   return (
     <div className="px-5 ">
