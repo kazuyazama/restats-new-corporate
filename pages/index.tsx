@@ -1,6 +1,7 @@
-import { createRef, useEffect, useLayoutEffect, useState } from "react";
+import {useEffect, useState } from "react";
 import { News } from "../types/News";
 import { client } from "../libs/client.js";
+import useTargetScroll from "../hooks/useTargetScroll";
 import Top from "../components/Organisms/Top";
 import Opening from "../components/Organisms/Opening";
 import TopAbout from "../components/Templates/TopAbout";
@@ -10,15 +11,12 @@ import TopContact from "../components/Templates/TopContact";
 import TopParther from "../components/Templates/TopPartner";
 import Particle from "../components/Particle";
 import ScrollDown from "../components/Atoms/ScrollDown";
-import useTargetScroll from "../hooks/useTargetScroll";
-import { gsap, Power2 } from "gsap";
 import TopNews from "../components/Templates/TopNews";
 
 export const getStaticProps = async () => {
   const data = await client.get({
     endpoint: "news",
   });
-  // .then((res) => console.log(res.json()));
 
   return {
     props: {
@@ -30,7 +28,7 @@ export const getStaticProps = async () => {
 export default function Home({ data }: { data: News }) {
   const { ref, scrollTarget, scrollTargetOffset } = useTargetScroll();
 
-  const splitRef = createRef<HTMLDivElement>();
+  // const splitRef = createRef<HTMLDivElement>();
 
   const [isOpening, setIsOpening] = useState(true);
   const [isOpeningText, setIsOpeningText] = useState(false);
@@ -70,13 +68,12 @@ export default function Home({ data }: { data: News }) {
 
   return (
     <>
-      {/* <Opening
-        splitRef={splitRef}
+      <Opening
+        // splitRef={splitRef}
         isOpening={isOpening}
         isOpeningText={isOpeningText}
-      /> */}
+      />
 
-      {/* <div className="target">町田から世界へ</div> */}
 
       <div className="">
         <Particle />

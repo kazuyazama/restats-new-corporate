@@ -4,10 +4,10 @@ import { RefObject, useEffect, useLayoutEffect, useRef } from "react";
 type Props = {
   isOpening: boolean;
   isOpeningText: boolean;
-  splitRef: RefObject<HTMLDivElement>;
+  // splitRef: RefObject<HTMLDivElement>;
 };
 
-const Opening = ({ isOpening, isOpeningText, splitRef }: Props) => {
+const Opening = ({ isOpening, isOpeningText }: Props) => {
 
   // const tl = useRef<gsap.core.Timeline | null>(null)
   // ///文字列分割react ver
