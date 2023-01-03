@@ -14,5 +14,5 @@ export type News = {
     publishedAt: string;
     revisedAt: string;
     name: string;
-  };
-};
+  }
+}[];

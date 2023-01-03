@@ -1,7 +1,10 @@
 import { News } from "../../types/News";
 
+type Props = {
+    data:News;
+}
 
-const TopNews = ({ data }: { data: News[] }) => {
+const TopNews = ({ data }:Props) => {
   return (
     <div className="grid max-w-screen-xl mx-auto items-center relative ">
       <div className="grid gap-5 lg:gap-10 absolute w-full ">
