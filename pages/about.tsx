@@ -4,9 +4,20 @@ import TriangleLeft from "../components/Atoms/TriangleLeft";
 import TriangleRight from "../components/Atoms/TriangleRight";
 import AboutItem from "../components/Organisms/AboutItem";
 import ServiceTitle from "../components/Organisms/ServiceTitle";
+import {NextSeo} from "next-seo"
 
 const about = () => {
   return (
+    <>
+    <NextSeo
+          title="about"
+          description="何度でもリスタートする集団であり続ける"
+          openGraph={{
+            url: "https://www.restarts.co.jp/about",
+            title: "about | 株式会社リス・ターツ",
+        
+          }}
+    />
     <div className="overflow-hidden ">
       <section className="px-5 mt-10 lg:mt-0 bg-primary">
         <ServiceTitle title="ABOUT" discription="私たちについて" />
@@ -79,6 +90,7 @@ const about = () => {
 
         <span className="absolute w-full h-64 mb-64 clip-path-triangle-right bg-gray-200"></span> */}
     </div>
+    </>
   );
 };
 
