@@ -1,6 +1,5 @@
 import { createRef, useEffect, useLayoutEffect, useState } from "react";
-import Ad from "../components/Organisms/Ad";
-import { Banner } from "../types/banner";
+import { News } from "../types/News";
 import { client } from "../libs/client.js";
 import Top from "../components/Organisms/Top";
 import Opening from "../components/Organisms/Opening";
@@ -12,23 +11,23 @@ import TopParther from "../components/Templates/TopPartner";
 import Particle from "../components/Particle";
 import ScrollDown from "../components/Atoms/ScrollDown";
 import useTargetScroll from "../hooks/useTargetScroll";
-import Swr from "../components/Swr";
 import { gsap, Power2 } from "gsap";
+import TopNews from "../components/Templates/TopNews";
 
 export const getStaticProps = async () => {
   const data = await client.get({
-    endpoint: "banner",
+    endpoint: "news",
   });
   // .then((res) => console.log(res.json()));
 
   return {
     props: {
-      data: data,
+      data: data.contents,
     },
   };
 };
 
-export default function Home({ data }: { data: Banner }) {
+export default function Home({ data }: { data: News }) {
   const { ref, scrollTarget, scrollTargetOffset } = useTargetScroll();
 
   const splitRef = createRef<HTMLDivElement>();
@@ -71,11 +70,11 @@ export default function Home({ data }: { data: Banner }) {
 
   return (
     <>
-      <Opening
+      {/* <Opening
         splitRef={splitRef}
         isOpening={isOpening}
         isOpeningText={isOpeningText}
-      />
+      /> */}
 
       {/* <div className="target">町田から世界へ</div> */}
 
@@ -138,7 +137,12 @@ export default function Home({ data }: { data: Banner }) {
 
         <span className="absolute w-full h-32 mb-32 lg:h-64 lg:mb-64 clip-path-triangle-right bg-gray-200"></span>
 
-        {/* <Ad data={data} /> */}
+        <section id="partner" className="py-72 lg:py-96 overflow-hidden  px-5">
+          <TopNews data={data}   />
+        </section>
+
+        <span className="absolute w-full h-32 -mt-32 lg:h-64 lg:-mt-64 clip-path-triangle-left bg-gray-100"></span>
+
       </div>
     </>
   );

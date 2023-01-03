@@ -29,6 +29,7 @@ const Layout = ({ children }: LayoutProps) => {
 
       <Header showBelow={620} offset={0} />
       <main>{children}</main>
+
       <Footer />
       <TopScroll showBelow={620} offset={0} />
     </>
