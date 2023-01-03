@@ -1,4 +1,4 @@
-import {useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { News } from "../types/News";
 import { client } from "../libs/client.js";
 import useTargetScroll from "../hooks/useTargetScroll";
@@ -70,12 +70,11 @@ export default function Home({ data }: { data: News }) {
 
   return (
     <>
-      <Opening
+      {/* <Opening
         // splitRef={splitRef}
         isOpening={isOpening}
         isOpeningText={isOpeningText}
-      />
-
+      /> */}
 
       <div className="">
         <Particle />
@@ -83,7 +82,7 @@ export default function Home({ data }: { data: News }) {
         <section className=" overflow-hidden lg:animate-kenburns-top  h-[85vh] lg:h-[100vh] bg-machida2  bg-cover bg-center relative -z-20 lg:-mt-28   ">
           <Top />
         </section>
-        <div className="absolute top-[78vh] lg:top-[92vh] right-20 lg:left-[50vw] ">
+        <div className="absolute top-[78vh] z-10 lg:top-[90vh] right-20 lg:left-[50vw] ">
           <ScrollDown
             scrollTarget={scrollTarget}
             scrollTargetOffset={scrollTargetOffset}
@@ -133,7 +132,7 @@ export default function Home({ data }: { data: News }) {
 
         <TriangleRight bgColor="bg-gray-200" />
         <section id="partner" className="py-72 lg:py-96 overflow-hidden  px-5">
-          <TopNews data={data}   />
+          <TopNews data={data} />
         </section>
 
         <TriangleLeft bgColor="bg-gray-100" />

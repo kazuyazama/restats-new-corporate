@@ -7,23 +7,16 @@ type Props = {
   discription: string;
   src: string;
   path: string;
-  bg:string;
-  height:string;
+  bg: string;
+  height: string;
 };
 
-const Card = ({ title, discription, src, path,bg,height }: Props) => {
+const Card = ({ title, discription, src, path, bg, height }: Props) => {
   return (
     <>
-        <AnimeImage bg={bg} height={height} path={path} />
-   
-        {/* <Image
-          alt={title}
-          src={src}
-          width={500}
-          height={450}
-          layout="responsive"
-          className="object-cover hover:opacity-60"
-        /> */}
+      <AnimeImage bg={bg} height={height} path={path} />
+
+ 
 
       <h3 className="mt-4 text-xl font-bold text-gray-900">{title}</h3>
 

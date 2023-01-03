@@ -24,7 +24,8 @@ const AnimeImage = ({ bg, title, height, path }: Props) => {
             <span className="hidden lg:inline-flex opacity-0 lg:group-hover:opacity-100 translate-y-5 group-hover:-translate-y-0 duration-300 delay-300">
               <MoreButton
                 borderWidth="before:w-[59px]"
-                color="border-white"
+                beforeColor="before:border-white"
+                afterColor="after:border-white"
                 textColor="text-white"
                 path={path}
               >
