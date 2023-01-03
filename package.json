@@ -33,7 +33,6 @@
     "react-scroll": "^1.8.8",
     "react-tsparticles": "^2.6.0",
     "recoil": "^0.7.6",
-    "swr": "^2.0.0",
     "tsparticles": "^2.6.0",
     "tsparticles-engine": "^2.6.0",
     "tsparticles-preset-bubbles": "^2.6.0",

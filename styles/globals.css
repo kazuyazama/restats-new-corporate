@@ -35,15 +35,27 @@ clip-path: polygon(0 25%, 100% 0, 100% 100%, 0 75%);
 }
 
 .clip-path-triangle-left {
-clip-path: polygon(100% 0%, 0% 100%, 100% 100%);
+clip-path: polygon(120% 0%, 0% 100%, 100% 120%);
+}
+
+.clip-path-triangle-new-left {
+clip-path: polygon(0 95%, 100% 0%, 100% 100%, 0 100%);
 }
 
 .clip-path-triangle-right {
   clip-path: polygon(100% 0, 0 0, 100% 100%);
 }
 
+.clip-path-triangle-new-right {
+  clip-path: polygon(100% 0%, 100% 100%, 0 5%, 0 0);
+}
+
 .clip-path-triangle-rb {
   clip-path: polygon(100% 100%, 0 0, 0 100%);
+}
+
+.clip-path-triangle-new-rb {
+  clip-path: polygon(0 0%, 100% 95%, 100% 100%, 0 100%);
 }
 
 .clip-path-arrow-right {

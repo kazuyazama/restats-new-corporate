@@ -1,3 +1,4 @@
+import TriangleRight from "../components/Atoms/TriangleRight";
 import ServiceTitle from "../components/Organisms/ServiceTitle";
 
 const privacy = () => {
@@ -205,7 +206,7 @@ const privacy = () => {
         </div>
       </section>
 
-      <span className="absolute w-full h-32 mb-64 lg:h-64 lg:mb-64 clip-path-triangle-right bg-gray-200 "></span>
+      <TriangleRight />
       {/* <span className="absolute w-full h-64 mb-64  clip-path-triangle-rb bg-white"></span> */}
     </div>
   );

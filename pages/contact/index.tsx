@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
 import { FormProvider, useForm } from "react-hook-form";
-import Confirm from "../../components/Pages/Confirm";
-import Input from "../../components/Pages/Input";
+import Confirm from "../../components/Form/Confirm";
+import Input from "../../components/Form/Input";
 
 const Contact = () => {
   const router = useRouter()

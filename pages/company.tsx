@@ -4,6 +4,8 @@ import ServiceTitle from "../components/Organisms/ServiceTitle";
 import Table from "../components/Organisms/Table";
 import PrimaryButton from "../components/Atoms/PrimaryButton";
 import GoogleMaps from "../components/Atoms/GoogleMaps";
+import TriangleLeft from "../components/Atoms/TriangleLeft";
+import TriangleRight from "../components/Atoms/TriangleRight";
 
 
 const profile = [
@@ -71,7 +73,7 @@ const company = () => {
         <ServiceTitle title="COMPANY" discription="企業情報" />
       </section>
 
-      <span className="absolute w-full h-32 -mt-32 lg:h-64 lg:-mt-64 clip-path-triangle-left bg-gray-200"></span>
+     <TriangleLeft bgColor="bg-gray-200" />
 
       <section id="about" className="py-40 bg-gray-200 ">
         <div className="max-w-screen-xl mx-auto relative">
@@ -79,7 +81,7 @@ const company = () => {
         </div>
       </section>
 
-      <span className="absolute w-full h-32 mb-64 lg:h-64 lg:mb-64 clip-path-triangle-right bg-gray-200"></span>
+      <TriangleRight bgColor="bg-gray-200" />
       {/* <span className="absolute w-full h-64 mb-64  clip-path-triangle-rb bg-white"></span> */}
 
       <section id="profile" className="py-80 px-5">
@@ -115,8 +117,9 @@ const company = () => {
           </div>
         </div>
       </section>
+       
+      <TriangleLeft bgColor="bg-gray-100" />
 
-      <span className="absolute w-full h-32 -mt-32 lg:h-64 lg:-mt-64 clip-path-triangle-left bg-gray-100"></span>
 
      
 

@@ -9,9 +9,11 @@ import TopService from "../components/Templates/TopService";
 import TopCompany from "../components/Templates/TopCompany";
 import TopContact from "../components/Templates/TopContact";
 import TopParther from "../components/Templates/TopPartner";
-import Particle from "../components/Particle";
+import Particle from "../components/Organisms/Particle";
 import ScrollDown from "../components/Atoms/ScrollDown";
 import TopNews from "../components/Templates/TopNews";
+import TriangleLeft from "../components/Atoms/TriangleLeft";
+import TriangleRight from "../components/Atoms/TriangleRight";
 
 export const getStaticProps = async () => {
   const data = await client.get({
@@ -88,8 +90,7 @@ export default function Home({ data }: { data: News }) {
           />
         </div>
 
-        <span className="absolute w-full h-32 lg:h-48 -mt-32 lg:-mt-48 clip-path-triangle-left bg-gray-200 -z-10"></span>
-
+        <TriangleLeft bgColor="bg-gray-200" />
         <section
           ref={ref}
           id="about"
@@ -98,7 +99,8 @@ export default function Home({ data }: { data: News }) {
           <TopAbout />
         </section>
 
-        <span className="absolute w-full h-32 mb-32 lg:h-64 lg:mb-64 clip-path-triangle-right bg-gray-200"></span>
+        <TriangleRight bgColor="bg-gray-200" />
+
         {/* <span className="absolute w-full h-64 mb-64  clip-path-triangle-rb bg-white"></span> */}
 
         <section
@@ -108,8 +110,7 @@ export default function Home({ data }: { data: News }) {
           <TopService />
         </section>
 
-        <span className="absolute w-full h-32 -mt-32 lg:h-64 lg:-mt-64 clip-path-triangle-left bg-gray-200"></span>
-
+        <TriangleLeft bgColor="bg-gray-200" />
         <section
           id="company"
           className="py-20 lg:py-40  bg-gray-200 overflow-hidden  px-5"
@@ -117,14 +118,12 @@ export default function Home({ data }: { data: News }) {
           <TopCompany />
         </section>
 
-        <span className="absolute w-full h-32 mb-32 lg:h-64 lg:mb-64 clip-path-triangle-right bg-gray-200"></span>
-
+        <TriangleRight bgColor="bg-gray-200" />
         <section id="partner" className="py-72 lg:py-96 overflow-hidden  px-5">
           <TopParther />
         </section>
 
-        <span className="absolute w-full h-32 -mt-32 lg:h-64 lg:-mt-64 clip-path-triangle-left bg-gray-200"></span>
-
+        <TriangleLeft bgColor="bg-gray-200" />
         <section
           id="contact"
           className="py-60 bg-gray-200 overflow-hidden px-5"
@@ -132,14 +131,12 @@ export default function Home({ data }: { data: News }) {
           <TopContact />
         </section>
 
-        <span className="absolute w-full h-32 mb-32 lg:h-64 lg:mb-64 clip-path-triangle-right bg-gray-200"></span>
-
+        <TriangleRight bgColor="bg-gray-200" />
         <section id="partner" className="py-72 lg:py-96 overflow-hidden  px-5">
           <TopNews data={data}   />
         </section>
 
-        <span className="absolute w-full h-32 -mt-32 lg:h-64 lg:-mt-64 clip-path-triangle-left bg-gray-100"></span>
-
+        <TriangleLeft bgColor="bg-gray-100" />
       </div>
     </>
   );

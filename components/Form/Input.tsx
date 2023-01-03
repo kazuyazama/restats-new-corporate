@@ -7,6 +7,8 @@ import SelectCheckboxLabel from "../Organisms/SelectCheckboxLabel";
 import TextAreaLabel from "../Organisms/TextAreaLabel";
 
 import type { FormValues } from "../../types/formValues";
+import TriangleLeft from "../Atoms/TriangleLeft";
+import TriangleRight from "../Atoms/TriangleRight";
 
 const Input = () => {
   const router = useRouter();
@@ -28,8 +30,7 @@ const Input = () => {
         <ServiceTitle title="CONTACT" discription="お問い合わせ" />
       </section>
 
-      <span className="absolute w-full h-32 -mt-32 lg:h-64 lg:-mt-64 clip-path-triangle-left bg-gray-200"></span>
-
+      <TriangleLeft bgColor="bg-gray-200" />
       <section className="bg-gray-200 py-20 px-5">
         <div className=" max-w-screen-xl mx-auto">
           <form
@@ -108,7 +109,8 @@ const Input = () => {
         </div>
       </section>
 
-      <span className="absolute w-full h-32 mb-32 lg:h-64 lg:mb-64 clip-path-triangle-right bg-gray-200 "></span>
+      <TriangleRight bgColor="bg-gray-200" />
+
       {/* <span className="absolute w-full h-64 mb-64  clip-path-triangle-rb bg-white"></span> */}
     </div>
   );

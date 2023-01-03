@@ -1,20 +1,21 @@
 import Image from "next/image";
 import TopTitleText from "../components/Atoms/TopTitleText";
+import TriangleLeft from "../components/Atoms/TriangleLeft";
+import TriangleRight from "../components/Atoms/TriangleRight";
 import AboutItem from "../components/Organisms/AboutItem";
 import ServiceTitle from "../components/Organisms/ServiceTitle";
 
 const about = () => {
   return (
-    <div className="overflow-hidden">
+    <div className="overflow-hidden ">
       <section className="px-5 mt-10 lg:mt-0 bg-primary">
         <ServiceTitle title="ABOUT" discription="私たちについて" />
       </section>
-      <span className="absolute w-full h-32 -mt-32 lg:h-64 lg:-mt-64 clip-path-triangle-left bg-gray-200"></span>
+      <TriangleLeft bgColor="bg-gray-200" />
 
       <AboutItem />
 
-      <span className="absolute w-full h-32 mb-32 lg:h-64 lg:mb-64 clip-path-triangle-right bg-gray-200"></span>
-
+      <TriangleRight bgColor="bg-gray-200" />
       <section id="profile" className="py-80 px-5 bg-white">
         <div className="max-w-screen-xl mx-auto relative">
           <div className="flex justify-center items-center">
@@ -29,7 +30,7 @@ const about = () => {
       </section>
 
       {/* <span className="absolute w-full h-64 -mt-64 clip-path-triangle-rb bg-white"></span> */}
-      <span className="absolute w-full h-32 -mt-32 lg:h-64 lg:-mt-64 clip-path-triangle-rb bg-gray-200 "></span>
+      <span className="absolute translate-y-1  w-full h-32 -mt-32 lg:h-64 lg:-mt-64 clip-path-triangle-new-rb bg-gray-200 "></span>
 
       <section className="py-32 lg:py-60 px-5  bg-gray-200">
         <div className="max-w-screen-xl mx-auto ">
@@ -65,9 +66,9 @@ const about = () => {
         </div>
       </section>
 
-      <span className="absolute w-full h-32 -mt-32 lg:h-64 lg:-mt-64 clip-path-triangle-left  bg-white"></span>
+      <TriangleLeft bgColor="bg-white" />
       <section id="works" className="py-40 px-5 bg-white"></section>
-      <span className="absolute w-full h-32 mb-64 lg:h-64 lg:mb-64 clip-path-triangle-right bg-white"></span>
+      <TriangleRight bgColor="bg-white" />
       {/* <section id="contact" className="">
         </section>
 
