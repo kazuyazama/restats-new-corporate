@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+const { transcode } = require('buffer');
 const plugin = require("tailwindcss/plugin");
 module.exports = {
   content: [
@@ -31,13 +32,15 @@ module.exports = {
       fontFamily:{
         NotoSans:["Noto Sans JP","sans-serif"],
         Roboto:["Roboto","sans-serif"],
+        Allura:["Allura","sans-serif"],
         
       },
       animation: {
        "scale-in-left": "scale-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) forwards",
-       "slide-width-right": "slide-width-right 3s linear   forwards",
+       "slide-width-right": "slide-width-right 1.3s linear forwards",
        "slide-trans-right": "slide-trans-right 6s ease-in-out forwards",
        "slide-trans-bottom": "slide-trans-bottom 0.8s ease-in-out  forwards",
+       "kenburns-top": "kenburns-top 7s ease   forwards"
       },
       keyframes: {
         "scale-in-left": {
@@ -54,7 +57,7 @@ module.exports = {
         },
         "slide-width-right": {
           "0%": {
-            width:"0%",
+            width:0,
             opacity:0
           },
           to: {
@@ -88,6 +91,16 @@ module.exports = {
             transform:"translateY(-100%)",
           },
         },
+        "kenburns-top": {
+          "0%": {
+              transform: "scale(1) ",
+              "transform-origin": "50% 16%"
+          },
+          to: {
+              transform: "scale(1.20) ",
+              "transform-origin": "center"
+          }
+        }
     
     },
      

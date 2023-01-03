@@ -51,17 +51,17 @@ const Top = () => {
   }, []);
 
   return (
-    <div className="px-5">
+    <div className="px-5 ">
       <div className=" relative max-w-screen-xl mx-auto">
         <div className="pt-28 lg:pt-40 grid place-items-center  text-white z-10 space-y-4 ">
-          <h1 id="h1" className="text-3xl lg:text-5xl  ">
+          {/* <h1 id="h1" className="text-3xl lg:text-5xl ">
             ワクワクを価値あるものに。
-          </h1>
-          <p id="p">
+          </h1> */}
+          {/* <p id="p" className="text-lg">
             ワクワクをカタチにするだけではなく、価値あるものにしていくクリエイトカンパニーです。
-          </p>
+          </p> */}
+          <div className="absolute font-Allura top-80 text-6xl ">From Machida to the World</div>
 
-          {/* High-speed homepage with no initial cost */}
         </div>
 
         {/* <div className=" h-[95vh]  w-full absolute -top-16 ">

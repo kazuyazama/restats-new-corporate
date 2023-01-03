@@ -18,7 +18,8 @@ const TopService = () => {
           <div className="absolute right-0 -bottom-10 -translate-x-12">
           <MoreButton
             borderWidth="before:w-[59px]"
-            color="black"
+            color="border-black"
+            textColor="text-black"
             path="/service"
           
             
@@ -40,7 +41,8 @@ const TopService = () => {
            <div className="absolute right-0 -bottom-10 -translate-x-12">
           <MoreButton
             borderWidth="before:w-[59px]"
-            color="black"
+            color="border-black"
+            textColor="text-black"
             path="/service"
           >
             MORE
@@ -61,7 +63,8 @@ const TopService = () => {
            <div className="absolute right-0 -bottom-10 -translate-x-12">
           <MoreButton
             borderWidth="before:w-[59px]"
-            color="black"
+            color="border-black"
+            textColor="text-black"
             path="/service"
           >
             MORE

@@ -30,7 +30,8 @@ const ServiceItem = ({title,after,children,path,image}:Props) => {
         <div className="flex justify-end -translate-x-12  ">
         <MoreButton
           borderWidth="before:w-[59px]"
-          color="black"
+          color="border-black"
+          textColor="text-black"
           path={path}
           
         >

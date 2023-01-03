@@ -16,7 +16,8 @@ const TopCompany = () => {
         <div className="absolute right-0 -bottom-10 -translate-x-12">
           <MoreButton
             borderWidth="before:w-[59px]"
-            color="black"
+            color="border-black"
+            textColor="text-black"
             path="/company"
           >
             MORE

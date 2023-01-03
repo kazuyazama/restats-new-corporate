@@ -14,9 +14,10 @@ const TopContact = () => {
         </TopTitleText>
       </div>
       <div className="group flex items-center justify-center translate-y-12 lg:translate-y-0 ">
-        <ContactButton width="w-2/3 lg:w-1/2" height="h-16 lg:h-20" path="/contact">
-          <MoreButton borderWidth="before:w-32" color="black" path="/company">
-            フォーム
+        <ContactButton width="w-full lg:w-96" height="h-20" path="/contact">
+          <MoreButton borderWidth="before:w-52" color="border-white"
+            textColor="text-white"  path="/company">
+            お問い合わせフォーム
           </MoreButton>
         </ContactButton>
 

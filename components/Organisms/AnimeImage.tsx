@@ -17,14 +17,15 @@ const AnimeImage = ({ bg, title, height, path }: Props) => {
         >
           <div className="flex flex-col  h-full gap-5 justify-center items-center">
             {title && (
-              <h3 className="text-3xl text-center lg:text-5xl text-white font-bold tracking-wider  font-OpenSans ">
+              <h3 className="text-3xl text-center lg:text-5xl text-white font-bold tracking-wider font-Allura ">
                 {title}
               </h3>
             )}
             <span className="hidden lg:inline-flex opacity-0 lg:group-hover:opacity-100 translate-y-5 group-hover:-translate-y-0 duration-300 delay-300">
               <MoreButton
                 borderWidth="before:w-[59px]"
-                color="white"
+                color="border-white"
+                textColor="text-white"
                 path={path}
               >
                 MORE

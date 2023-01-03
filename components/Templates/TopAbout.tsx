@@ -16,7 +16,8 @@ const TopAbout = () => {
           <div className="absolute -bottom-10 lg:bottom-40 ">
             <MoreButton
               borderWidth="before:w-[59px]"
-              color="black"
+              color="border-black"
+              textColor="text-black"
               path="/about"
             >
               MORE

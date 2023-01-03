@@ -1,7 +1,4 @@
-import {
-  useEffect,
-  useState,
-} from "react";
+import { createRef, useEffect, useLayoutEffect, useState } from "react";
 import Ad from "../components/Organisms/Ad";
 import { Banner } from "../types/banner";
 import { client } from "../libs/client.js";
@@ -15,6 +12,8 @@ import TopParther from "../components/Templates/TopPartner";
 import Particle from "../components/Particle";
 import ScrollDown from "../components/Atoms/ScrollDown";
 import useTargetScroll from "../hooks/useTargetScroll";
+import Swr from "../components/Swr";
+import { gsap, Power2 } from "gsap";
 
 export const getStaticProps = async () => {
   const data = await client.get({
@@ -30,9 +29,9 @@ export const getStaticProps = async () => {
 };
 
 export default function Home({ data }: { data: Banner }) {
-  // const domRef = useRef<HTMLElement>(null);
-
   const { ref, scrollTarget, scrollTargetOffset } = useTargetScroll();
+
+  const splitRef = createRef<HTMLDivElement>();
 
   const [isOpening, setIsOpening] = useState(true);
   const [isOpeningText, setIsOpeningText] = useState(false);
@@ -56,14 +55,34 @@ export default function Home({ data }: { data: Banner }) {
   //   return () => window.removeEventListener("load", timeOut);
   // }, []);
 
+  //文字列分割する処理
+
+  // useEffect(() => {
+  //   const wrapCharSpan = function(str){
+  //     return [...str].map(char => `<span>${char}</span>`).join('');
+  // }
+
+  // //対象の要素を取得する
+  // const target = document.querySelector('.target');
+  // //要素の内容を関数の実行結果で置き換える
+  // target.innerHTML = wrapCharSpan(target.textContent);
+
+  // },[])
+
   return (
     <>
-      {/* <Opening isOpening={isOpening} isOpeningText={isOpeningText} /> */}
+      <Opening
+        splitRef={splitRef}
+        isOpening={isOpening}
+        isOpeningText={isOpeningText}
+      />
+
+      {/* <div className="target">町田から世界へ</div> */}
 
       <div className="">
         <Particle />
 
-        <section className="h-[85vh] md:h-[100vh] bg-machida2  bg-cover bg-center relative -z-20 lg:-mt-28  ">
+        <section className=" overflow-hidden lg:animate-kenburns-top  h-[85vh] md:h-[100vh] bg-machida2  bg-cover bg-center relative -z-20 lg:-mt-28   ">
           <Top />
         </section>
         <div className="absolute top-[78vh] lg:top-[92vh] right-20 lg:left-[50vw] ">
@@ -86,7 +105,10 @@ export default function Home({ data }: { data: Banner }) {
         <span className="absolute w-full h-32 mb-32 lg:h-64 lg:mb-64 clip-path-triangle-right bg-gray-200"></span>
         {/* <span className="absolute w-full h-64 mb-64  clip-path-triangle-rb bg-white"></span> */}
 
-        <section id="service" className=" py-64 lg:py-[26rem] overflow-hidden  px-5">
+        <section
+          id="service"
+          className=" py-64 lg:py-[26rem] overflow-hidden  px-5"
+        >
           <TopService />
         </section>
 

@@ -67,7 +67,7 @@ const about = () => {
 
       <span className="absolute w-full h-32 -mt-32 lg:h-64 lg:-mt-64 clip-path-triangle-left  bg-white"></span>
       <section id="works" className="py-40 px-5 bg-white"></section>
-      <span className="absolute w-full h-64 mb-64 clip-path-triangle-right bg-white"></span>
+      <span className="absolute w-full h-32 mb-64 lg:h-64 lg:mb-64 clip-path-triangle-right bg-white"></span>
       {/* <section id="contact" className="">
         </section>
 
