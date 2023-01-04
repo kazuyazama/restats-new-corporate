@@ -20,30 +20,15 @@ const partner = () => {
         </section>
         <TriangleLeft bgColor="bg-gray-200" />
 
-        <section id="about" className="py-40 bg-gray-200 px-5">
-          <div className="text-4xl font-semibold grid place-items-center">
-            現在改修中です。
+        <section id="about" className="pt-36 pb-52 bg-gray-200 px-5">
+          <div className="text-3xl lg:text-4xl font-semibold grid place-items-center">
+            現在改修中です
           </div>
         </section>
 
-        <TriangleRight bgColor="bg-gray-200" />
-        {/* <span className="absolute w-full h-64 mb-64  clip-path-triangle-rb bg-white"></span> */}
+        {/* <TriangleRight bgColor="bg-gray-200" /> */}
+        
 
-        <section id="profile" className=""></section>
-
-        <TriangleLeft />
-
-        <section id="works" className=""></section>
-
-        <TriangleRight />
-
-        <section id="contact" className=""></section>
-
-        <TriangleLeft />
-
-        <section id="contact" className=""></section>
-
-        <TriangleRight />
       </div>
     </>
   );

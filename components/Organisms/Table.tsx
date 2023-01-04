@@ -22,7 +22,7 @@ const Table = ({ profile }:{profile:Props}) => {
         {profile.map((li) => (
           <tr
             key={li.title}
-            className="flex py-5 items-center border-t last:border-y  border-black "
+            className="flex gap-5 py-5 items-center border-t last:border-y  border-black "
           >
             <td className="basis-1/3 ">{li.title}</td>
 

@@ -2,7 +2,7 @@ import AboutBox from "../Atoms/AboutBox";
 
 const AboutItem = () => {
   return (
-    <section id="about" className="py-40 px-5 bg-gray-200 ">
+    <section id="about" className="pt-10 lg:pb-5  px-5 bg-gray-200 ">
       <div className="max-w-screen-xl mx-auto">
         <div className="flex flex-col text-center  gap-10 pb-5">
           <h1 className="text-2xl lg:text-4xl font-semibold ">

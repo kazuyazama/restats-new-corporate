@@ -70,13 +70,13 @@ export default function Home({ data }: { data: News }) {
 
   return (
     <>
-      <Opening
+      {/* <Opening
         // splitRef={splitRef}
         isOpening={isOpening}
         isOpeningText={isOpeningText}
-      />
+      /> */}
 
-      <div className="">
+      <div className=" ">
         <Particle />
 
         <section className=" overflow-hidden lg:animate-kenburns-top  h-[85vh] lg:h-[100vh] bg-machida2  bg-cover bg-center relative -z-20 lg:-mt-28   ">
@@ -93,7 +93,7 @@ export default function Home({ data }: { data: News }) {
         <section
           ref={ref}
           id="about"
-          className="py-56 lg:py-28 bg-gray-200 overflow-hidden px-5  "
+          className="pt-40 pb-20 lg:py-20 bg-gray-200 overflow-hidden px-5  "
         >
           <TopAbout />
         </section>
@@ -103,7 +103,7 @@ export default function Home({ data }: { data: News }) {
 
         <section
           id="service"
-          className=" py-64 lg:py-[26rem] overflow-hidden  px-5"
+          className="py-52 lg:pt-72 lg:pb-[22rem] overflow-hidden  px-5"
         >
           <TopService />
         </section>
@@ -111,30 +111,30 @@ export default function Home({ data }: { data: News }) {
         <TriangleLeft bgColor="bg-gray-200" />
         <section
           id="company"
-          className="py-20 lg:py-40  bg-gray-200 overflow-hidden  px-5"
+          className="py-10 lg:pt-16  bg-gray-200 overflow-hidden  px-5"
         >
           <TopCompany />
         </section>
 
         <TriangleRight bgColor="bg-gray-200" />
-        <section id="partner" className="py-72 lg:py-96 overflow-hidden  px-5">
+        <section id="partner" className="pt-72 pb-60 lg:py-[50vh] overflow-hidden  px-5">
           <TopParther />
         </section>
 
         <TriangleLeft bgColor="bg-gray-200" />
         <section
           id="contact"
-          className="py-60 bg-gray-200 overflow-hidden px-5"
+          className="pt-32 pb-24 lg:py-52 bg-gray-200 overflow-hidden px-5"
         >
           <TopContact />
         </section>
 
         <TriangleRight bgColor="bg-gray-200" />
-        <section id="partner" className="py-72 lg:py-96 overflow-hidden  px-5">
+        <section id="partner" className="py-52 lg:py-[40vh] overflow-hidden  px-5">
           <TopNews data={data} />
         </section>
 
-        <TriangleLeft bgColor="bg-gray-100" />
+        {/* <TriangleLeft bgColor="bg-gray-100" /> */}
       </div>
     </>
   );

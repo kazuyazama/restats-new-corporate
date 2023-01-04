@@ -8,7 +8,7 @@ const TopContact = () => {
       <div className=" ">
         <TopTitleText
           after="after:content-['お問い合わせ']"
-          top="-top-24 lg:top-0"
+          top="-top-24 lg:-top-36"
         >
           Contact
         </TopTitleText>

@@ -60,7 +60,7 @@ const Confirm = () => {
       </section>
 
       <TriangleLeft bgColor="bg-gray-200" />
-      <section className="bg-gray-200 py-20 px-5">
+      <section className="bg-gray-200 pt-10 pb-20 px-5">
         <div className=" max-w-screen-xl mx-auto">
           <form
             onSubmit={handleSubmit(onSubmit)}
@@ -144,8 +144,7 @@ const Confirm = () => {
         </div>
       </section>
 
-      <TriangleRight bgColor="bg-gray-200" />
-        {/* <span className="absolute w-full h-64 mb-64  clip-path-triangle-rb bg-white"></span> */}
+      {/* <TriangleRight bgColor="bg-gray-200" /> */}
     </div>
   );
 };

@@ -23,7 +23,7 @@ const privacy = () => {
 
         <span className="absolute w-full h-32 -mt-32 lg:h-64 lg:-mt-64 clip-path-triangle-left bg-gray-200"></span>
 
-        <section className="bg-gray-200 py-20 px-5">
+        <section className="bg-gray-200 pt-12 pb-20 lg:py-20 px-5">
           <div className=" max-w-screen-xl mx-auto">
             <div>
               <h1 className="text-lg pb-10">

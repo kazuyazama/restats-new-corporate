@@ -27,8 +27,13 @@ const TopAbout = () => {
         </div>
         <div className="bg-about bg-cover bg-no-repeat bg-center lg:w-[50vw] h-80 lg:h-[60vh]  rounded-l-3xl  flex justify-center relative my-10 lg:pt-0   ">
         
-          <div className="absolute -bottom-40 right-5 lg:left-20 2xl:left-32 z-30 ">
-          <Image loader={({src}) => src} src="/about.webp" width={200} height={200}  className="rounded-2xl"  />
+          <div className="absolute -bottom-28 lg:-bottom-32 right-2 lg:left-20 2xl:left-32 z-30 ">
+            <div className="hidden lg:inline-flex">
+          <Image loader={({src}) => src} src="/マンションマン_ポーズ3.png" width={200} height={200}  className="rounded-2xl"  />
+            </div>
+            <div className="inline-flex lg:hidden">
+          <Image loader={({src}) => src} src="/マンションマン_ポーズ3.png" width={150} height={150}  className="rounded-2xl"  />
+            </div>
 
           </div>
         

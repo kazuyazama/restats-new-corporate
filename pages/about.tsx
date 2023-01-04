@@ -26,7 +26,7 @@ const about = () => {
         <AboutItem />
 
         <TriangleRight bgColor="bg-gray-200" />
-        <section id="profile" className="py-80 px-5 bg-white">
+        <section id="profile" className="py-60 lg:py-80 px-5 bg-white">
           <div className="max-w-screen-xl mx-auto relative">
             <div className="flex justify-center items-center">
               <TopTitleText
@@ -42,7 +42,7 @@ const about = () => {
         {/* <span className="absolute w-full h-64 -mt-64 clip-path-triangle-rb bg-white"></span> */}
         <span className="absolute translate-y-1  w-full h-32 -mt-32 lg:h-64 lg:-mt-64 clip-path-triangle-new-rb bg-gray-200 "></span>
 
-        <section className="py-32 lg:py-60 px-5  bg-gray-200">
+        <section className="pt-10 pb-12 lg:pt-24 lg:pb-16 px-5  bg-gray-200">
           <div className="max-w-screen-xl mx-auto ">
             <div className=" flex flex-col lg:flex-row  justify-center lg:justify-around ">
               <div className=" basis-full space-y-10 lg:-translate-y-20 ">
@@ -63,7 +63,8 @@ const about = () => {
                 </p>
               </div>
 
-              <div className="basis-1/3 translate-y-24 lg:translate-y-12 2xl:translate-y-16 ">
+              <div className="basis-1/3 translate-y-12 text-end lg:translate-y-20 2xl:translate-y-16 ">
+                <div className="hidden lg:block">
                 <Image
                   src="/CEO.webp"
                   loader={({ src }) => src}
@@ -71,23 +72,25 @@ const about = () => {
                   height={550}
                   layout="responsive"
                 />
+                </div>
+                <div className="lg:hidden translate-y-1">
+                <Image
+                  src="/CEO.webp"
+                  loader={({ src }) => src}
+                  width={300}
+                  height={300}
+                />
+                </div>
+                
               </div>
             </div>
           </div>
         </section>
 
-        <TriangleLeft bgColor="bg-white" />
-        <section id="works" className="py-40 px-5 bg-white"></section>
-        <TriangleRight bgColor="bg-white" />
-        {/* <section id="contact" className="">
-        </section>
-
-        <span className="absolute w-full h-64 -mt-64 clip-path-triangle-left bg-gray-200"></span>
-
-        <section id="contact" className="">
-        </section>
-
-        <span className="absolute w-full h-64 mb-64 clip-path-triangle-right bg-gray-200"></span> */}
+        {/* <TriangleLeft bgColor="bg-white" /> */}
+        {/* <section id="works" className="py-40 px-5 bg-white"></section> */}
+        {/* <TriangleRight bgColor="bg-white" /> */}
+  
       </div>
     </>
   );

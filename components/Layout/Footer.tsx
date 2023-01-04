@@ -3,7 +3,7 @@ import FooterNavItem from "../Atoms/FooterNavItem";
 
 const Footer = () => {
   return (
-    <footer aria-label="Footer" className="bg-gray-100 pt-52 pb-5">
+    <footer aria-label="Footer" className="bg-gray-100 pt-12 pb-5">
       <div className="mx-auto max-w-screen-xl space-y-8 flex flex-col justify-center items-center ">
         <div className="">
           <div className="hidden lg:inline-flex">

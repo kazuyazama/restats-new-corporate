@@ -81,7 +81,7 @@ const company = () => {
 
         <TriangleLeft bgColor="bg-gray-200" />
 
-        <section id="about" className="py-40 bg-gray-200 ">
+        <section id="about" className="pt-20 pb-2 bg-gray-200 ">
           <div className="max-w-screen-xl mx-auto relative">
             <Table profile={profile} />
           </div>
@@ -90,7 +90,7 @@ const company = () => {
         <TriangleRight bgColor="bg-gray-200" />
         {/* <span className="absolute w-full h-64 mb-64  clip-path-triangle-rb bg-white"></span> */}
 
-        <section id="profile" className="py-80 px-5">
+        <section id="profile" className="pt-36 lg:pt-72 px-5">
           <div className="max-w-screen-xl mx-auto relative">
             <TopTitleText top="top-0" after="after:content-['アクセス']">
               ACCESS
@@ -128,7 +128,7 @@ const company = () => {
           </div>
         </section>
 
-        <TriangleLeft bgColor="bg-gray-100" />
+        {/* <TriangleLeft bgColor="bg-gray-100" /> */}
       </div>
     </>
   );
