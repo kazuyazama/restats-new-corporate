@@ -1,4 +1,4 @@
-import { createRef, RefObject, useCallback, useRef } from "react";
+import { createRef,  useCallback,} from "react";
 
 const useTargetScroll = () => {
 

@@ -1,5 +1,4 @@
-import { VoidCallback } from "@rive-app/react-canvas";
-import { createRef, RefObject, useCallback, useEffect, useState } from "react";
+import {  useCallback, useEffect, useState } from "react";
 
 type Props = {
   showBelow?:number;
