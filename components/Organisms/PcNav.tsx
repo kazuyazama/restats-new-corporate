@@ -7,7 +7,7 @@ const PcNav = () => {
   return (
     <nav className="font-Roboto">
       <ul
-        className={`flex justify-evenly gap-10 items-center cursor-pointer  text-gray-100 `}
+        className={`flex justify-evenly gap-12 items-center cursor-pointer  text-gray-100 `}
       >
         <ListItem borderWidth={"before:w-14"} to={"/about"}>
           ABOUT
@@ -25,9 +25,11 @@ const PcNav = () => {
           PARTNER
         </ListItem>
 
-        <li className="w-40">
-          <ContactButton path="/contact">CONTACT</ContactButton>
-        </li>
+        <ListItem borderWidth={"before:w-[70px]"} to={"/contact"}>
+          CONTACT
+        </ListItem>
+
+        
       </ul>
     </nav>
   );

@@ -124,7 +124,7 @@ export default function Home({ data }: { data: News }) {
         <TriangleLeft bgColor="bg-gray-200" />
         <section
           id="contact"
-          className="pt-32 pb-24 lg:py-52 bg-gray-200 overflow-hidden px-5"
+          className="lg:py-12  bg-gray-200 overflow-hidden px-5"
         >
           <TopContact />
         </section>
