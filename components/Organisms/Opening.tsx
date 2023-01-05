@@ -1,5 +1,3 @@
-import gsap, { Power2 } from "gsap";
-import { RefObject, useEffect, useLayoutEffect, useRef } from "react";
 
 type Props = {
   isOpening: boolean;

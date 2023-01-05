@@ -1,10 +1,10 @@
-import { gsap, Power2 } from "gsap";
-import { useCallback, useLayoutEffect, useRef } from "react";
+import React from "react";
+import { animated, useSpring, useTrail } from "@react-spring/web";
 
 const Top = () => {
-  const targetRef = useRef(null);
+  // const targetRef = useRef(null);
 
-  const tl = useRef<gsap.core.Timeline | null>(null);
+  // const tl = useRef<gsap.core.Timeline | null>(null);
 
   // const { rive, RiveComponent } = useRive({
   //   src: "main9.riv",
@@ -25,7 +25,7 @@ const Top = () => {
   //         autoAlpha: 0,
   //         y: 100,
   //       }),
-     
+
   //       (tl.current = gsap
   //         .timeline()
   //         .to("#h1", {
@@ -50,6 +50,18 @@ const Top = () => {
   //   return () => ctx.revert();
   // }, []);
 
+
+  //react-spring の設定
+
+  // const [open, set] = useState(true);
+
+  const trails = useTrail(1, {
+    from: { opacity: 0 },
+    to: { opacity: 1 },
+  });
+
+ 
+
   return (
     <div className="px-5 ">
       <div className=" relative max-w-screen-xl mx-auto">
@@ -60,8 +72,18 @@ const Top = () => {
           {/* <p id="p" className="text-lg">
             ワクワクをカタチにするだけではなく、価値あるものにしていくクリエイトカンパニーです。
           </p> */}
-          <div className="absolute w-full font-Allura left-4 lg:left-72  top-40 lg:top-80 text-6xl lg:text-7xl ">From Machida to the World</div>
+          {trails.map((props,index) => (
+            <animated.div
+              key={index}
+              className="absolute w-full font-Allura left-4 lg:left-72  top-40 lg:top-80 text-6xl lg:text-7xl"
+              style={props}
+            >
+              From Machida to the World
+            </animated.div>
+          ))}
+        
 
+          {/* <div className="absolute w-full font-Allura left-4 lg:left-72  top-40 lg:top-80 text-6xl lg:text-7xl ">From Machida to the World</div> */}
         </div>
 
         {/* <div className=" h-[95vh]  w-full absolute -top-16 ">

@@ -19,7 +19,7 @@ const Header = ({ showBelow, offset }: Props) => {
       <header
         aria-label="Page Header "
         id="top"
-        className="fixed w-full lg:static z-[99] "
+        className="fixed w-full lg:static z-[99]  "
       >
         <div
           className={`w-full ${

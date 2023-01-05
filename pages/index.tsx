@@ -78,10 +78,12 @@ export default function Home({ data }: { data: News }) {
 
       <div className=" ">
         <Particle />
-
-        <section className=" overflow-hidden lg:animate-kenburns-top  h-[85vh] lg:h-[100vh] bg-machida2  bg-cover bg-center relative -z-20 lg:-mt-28   ">
+        <div className="overflow-hidden w-full lg:-mt-28">
+        <section className="  lg:animate-kenburns-top  h-[85vh] lg:h-[100vh] bg-machida2  bg-cover bg-center relative -z-20  ">
           <Top />
         </section>
+
+        </div>
         <div className="absolute top-[78vh] z-10 lg:top-[90vh] right-20 lg:left-[50vw] ">
           <ScrollDown
             scrollTarget={scrollTarget}
