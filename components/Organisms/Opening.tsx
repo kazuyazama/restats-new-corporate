@@ -1,3 +1,5 @@
+import { RefObject, useEffect } from "react";
+import Trail from "../Atoms/Trail";
 
 type Props = {
   isOpening: boolean;
@@ -5,10 +7,9 @@ type Props = {
   // splitRef: RefObject<HTMLDivElement>;
 };
 
-const Opening = ({ isOpening, isOpeningText }: Props) => {
+const Opening = ({ isOpening, isOpeningText, }: Props) => {
 
-  // const tl = useRef<gsap.core.Timeline | null>(null)
-  // ///文字列分割react ver
+  ///文字列分割react ver
 
   // useEffect(() => {
   //   const wrapCharSpan = function (str) {
@@ -30,15 +31,27 @@ const Opening = ({ isOpening, isOpeningText }: Props) => {
         !isOpening && " animate-slide-trans-bottom "
       } `}
     >
-      <div
-        // id="h1"
+      <h1
         // ref={splitRef}
         className={` absolute top-1/2 z-[10000] left-1/2 -translate-x-1/2 -translate-y-1/2`}
         // className={`absolute top-1/2 left-1/2 -translate-y-1/2 [&>span]:inline-block [&>span]:opacity-0 [&>span]:whitespace-nowrap [&>span]:overflow-hidden   ${isOpeningText && "[&>span]:animate-slide-width-right"}`}
       >
-        <h1 className={`whitespace-nowrap overflow-hidden text-secondary tracking-widest text-4xl lg:text-5xl font-semibold ${isOpeningText && "animate-slide-width-right"}`}>町田から世界へ</h1>
+        {/* <h1 className={`whitespace-nowrap overflow-hidden text-secondary tracking-widest text-4xl lg:text-5xl font-semibold ${isOpeningText && "animate-slide-width-right"}`}>町田から世界へ</h1> */}
+        {isOpeningText && (
+        <Trail>
+          <span>町</span>
+          <span>田</span>
+          <span>か</span>
+          <span>ら</span>
+          <span>世</span>
+          <span>界</span>
+          <span>へ</span>
+        </Trail>
+
+          )}
+
         
-      </div>
+      </h1>
     </div>
   );
 };

@@ -81,6 +81,9 @@ const Top = () => {
               From Machida to the World
             </animated.div>
           ))}
+
+        
+
         
 
           {/* <div className="absolute w-full font-Allura left-4 lg:left-72  top-40 lg:top-80 text-6xl lg:text-7xl ">From Machida to the World</div> */}

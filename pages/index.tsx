@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { createRef, useEffect, useState } from "react";
 import { News } from "../types/News";
 import { client } from "../libs/client.js";
 import useTargetScroll from "../hooks/useTargetScroll";
@@ -34,15 +34,18 @@ export default function Home({ data }: { data: News }) {
 
   const [isOpening, setIsOpening] = useState(true);
   const [isOpeningText, setIsOpeningText] = useState(false);
+  const [layout,setLayout] = useState(false)
 
   //オープニングアニメーションを出す為に通常Layoutを2秒遅らせる
 
   useEffect(() => {
     const timeOut = () => {
-      setIsOpening(true);
+      // setIsOpening(true);
       setIsOpeningText(true);
+      //2秒経ったらオープニングを消す
       setTimeout(() => {
         setIsOpening(false);
+        setLayout(true)
       }, 2000);
     };
     timeOut();
@@ -54,27 +57,17 @@ export default function Home({ data }: { data: News }) {
   //   return () => window.removeEventListener("load", timeOut);
   // }, []);
 
-  //文字列分割する処理
-
-  // useEffect(() => {
-  //   const wrapCharSpan = function(str){
-  //     return [...str].map(char => `<span>${char}</span>`).join('');
-  // }
-
-  // //対象の要素を取得する
-  // const target = document.querySelector('.target');
-  // //要素の内容を関数の実行結果で置き換える
-  // target.innerHTML = wrapCharSpan(target.textContent);
-
-  // },[])
+  
 
   return (
     <>
-      {/* <Opening
+      <Opening
         // splitRef={splitRef}
         isOpening={isOpening}
         isOpeningText={isOpeningText}
-      /> */}
+      />
+
+      {layout && (
 
       <div className=" ">
         <Particle />
@@ -138,6 +131,8 @@ export default function Home({ data }: { data: News }) {
 
         {/* <TriangleLeft bgColor="bg-gray-100" /> */}
       </div>
+      )}
+
     </>
   );
 }
