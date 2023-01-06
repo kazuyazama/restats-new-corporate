@@ -7,16 +7,16 @@ const TopContact = () => {
   return (
     <div className="flex flex-col lg:flex-row max-w-screen-xl mx-auto items-center justify-between relative ">
       <div className="w-full lg:w-3/5 ">
-        <div className="group flex items-center justify-center translate-y-12 lg:translate-y-0 border bg-primary h-[50vh] lg:h-[65vh] ">
+        <div className="group flex items-center justify-center translate-y-12 lg:translate-y-0 border bg-primary h-[55vh] lg:h-[65vh] ">
           <TopTitleText
             after="after:content-['お問い合わせ']"
-            top="top-10 lg:top-16 "
+            top="top-7 lg:top-16 "
           >
             Contact
           </TopTitleText>
           <div className=" translate-y-10 flex flex-col gap-5 lg:gap-10">
             <ContactButton
-              width="w-80 lg:w-96"
+              width="w-72 lg:w-96"
               height="h-16 lg:h-20"
               path="/contact"
               bgColor="bg-secondary"
@@ -32,7 +32,7 @@ const TopContact = () => {
               </MoreButton>
             </ContactButton>
             <ContactButton
-              width="w-80 lg:w-96"
+              width="w-72 lg:w-96"
               height="h-16 lg:h-20"
               path="tel:042-866-3979"
               bgColor="bg-gray-200"
