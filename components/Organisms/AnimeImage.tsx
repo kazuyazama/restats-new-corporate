@@ -13,7 +13,11 @@ const AnimeImage = ({ bg, title, height, path }: Props) => {
     <Link href={`${path}`} className="">
       <div className="overflow-hidden relative rounded-3xl group cursor-pointer ">
         <figure
-          className={`${bg} ${height} w-full ${bg === "bg-machida" ? "bg-[length:100vw_50vh]" : "bg-[length:100vw_30vh]" }  lg:bg-cover bg-center bg-no-repeat after:-z-10  after:bg-gray-800 after:w-full after:h-full after:absolute after:top-0  after:rounded-3xl after:cursor-pointer after:opacity-0 after:group-hover:opacity-50 lg:group-hover:scale-105 group-hover:duration-300`}
+          className={`${bg} ${height} w-full ${
+            bg === "bg-machida"
+              ? "bg-[length:100vw_50vh]"
+              : "bg-[length:100vw_30vh]"
+          }  lg:bg-cover bg-center bg-no-repeat after:-z-10  after:bg-gray-800 after:w-full after:h-full after:absolute after:top-0  after:rounded-3xl after:cursor-pointer after:opacity-0 after:group-hover:opacity-50 lg:group-hover:scale-105 group-hover:duration-300`}
         >
           <div className="flex flex-col  h-full gap-5 justify-center items-center">
             {title && (

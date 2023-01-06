@@ -1,8 +1,11 @@
+
 import MoreButton from "../Atoms/MoreButton";
 import TopTitleText from "../Atoms/TopTitleText";
 import Card from "../Organisms/Card";
 
 const TopService = () => {
+
+  
   return (
     <div className="grid lg:grid-cols-3 gap-20 lg:gap-8 max-w-screen-xl mx-auto items-center relative mt-20">
       <TopTitleText after="after:content-['事業内容']" top="-top-32">
@@ -13,7 +16,8 @@ const TopService = () => {
           title="マンションwifiネット"
           discription="日本で唯一の集合住宅向けインターネット回線検索ポータルサイト。マンションwifiネットを運営しています"
           src="/マンションwifiネット.jpg"
-          path="/service"
+          path="/service/#manshon-wifi"
+    
           bg="bg-manshonwifi"
           height="h-[30vh] lg:h-[47vh] "
         />
@@ -34,7 +38,7 @@ const TopService = () => {
           title="Web開発"
           discription="日本ではまだあまり利用されていない最新の技術を用いて、Webサイト、Webアプリケーションを開発しています"
           src="/webDevelopment.webp"
-          path="/service"
+          path="/service/#web"
           bg="bg-web-development"
           height="h-[30vh] lg:h-[47vh]"
         />
@@ -55,7 +59,7 @@ const TopService = () => {
           title="代理店事業"
           discription="大手キャリア様の販売代理店として活動をしています。また一緒に活動していただける販売パートナー様を募集しています"
           src="/agency.webp"
-          path="/service"
+          path="/service/#agency"
           bg="bg-agency"
           height="h-[30vh] lg:h-[47vh]"
         />

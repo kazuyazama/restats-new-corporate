@@ -7,7 +7,7 @@ const TopContact = () => {
   return (
     <div className="flex flex-col lg:flex-row max-w-screen-xl mx-auto items-center justify-between relative ">
       <div className="w-full lg:w-3/5 ">
-        <div className="group flex items-center justify-center translate-y-12 lg:translate-y-0 border bg-primary h-[55vh] lg:h-[65vh] ">
+        <div className="group flex items-center justify-center translate-y-12 lg:translate-y-0 border bg-primary h-[50vh] lg:h-[65vh] ">
           <TopTitleText
             after="after:content-['お問い合わせ']"
             top="top-10 lg:top-16"

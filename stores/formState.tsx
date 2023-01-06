@@ -1,8 +1,8 @@
 import { atom } from "recoil"
 
-const inputState = atom({
-    key:"inputState",
-    default: ""
+const centerState = atom({
+    key:"centerState",
+    default: null
 })
 
-export default inputState;
+export default centerState;

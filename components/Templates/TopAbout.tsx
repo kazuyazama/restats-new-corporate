@@ -5,7 +5,7 @@ import TopTitleText from "../Atoms/TopTitleText";
 const TopAbout = () => {
   return (
       <div className="lg:grid grid-cols-2 items-center gap-8 max-w-screen-xl mx-auto relative -mt-28 lg:mt-0">
-          <TopTitleText after="after:content-['私たちについて']" top="top-0">About</TopTitleText>
+          <TopTitleText after="after:content-['私たちについて']" top="lg:top-16 ">About</TopTitleText>
         <div className="w-full space-y-5 flex flex-col pt-28 lg:pt-0  ">
           <h3 className="text-2xl font-semibold ">何度でもリスタートする集団であり続ける。</h3>
           <p>

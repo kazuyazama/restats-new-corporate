@@ -5,6 +5,7 @@ import ServiceItem from "../components/Organisms/ServiceItem";
 import ServiceTitle from "../components/Organisms/ServiceTitle";
 
 const service = () => {
+
   return (
     <>
       <NextSeo
@@ -25,7 +26,7 @@ const service = () => {
 
         <TriangleLeft bgColor="bg-gray-200" />
 
-        <section id="about" className="py-12 lg:pt-16 lg:pb-10 bg-gray-200 px-5 ">
+        <section id="manshon-wifi" className="py-12 lg:pt-16 lg:pb-10 bg-gray-200 px-5 ">
           <ServiceItem
             title="マンションwifiネット"
             after="after:content-['集合住宅向けインターネット回線検索ポータルサイト']"
@@ -45,11 +46,11 @@ const service = () => {
         <TriangleRight bgColor="bg-gray-200" />
         {/* <span className="absolute w-full h-64 mb-64  clip-path-triangle-rb bg-white"></span> */}
 
-        <section id="profile" className="py-40 lg:py-72 px-5">
+        <section id="web" className="py-40 lg:py-72 px-5">
           <ServiceItem
             title="Web開発"
             after="after:content-['webサイト・webアプリケーション開発']"
-            path="/"
+            // path="/"
             image="bg-web-development"
           >
             webサイトやwebアプリケーションは誰に見てもらうものですか？
@@ -61,7 +62,7 @@ const service = () => {
         </section>
 
         <TriangleLeft bgColor="bg-gray-200" />
-        <section id="works" className="pt-12 lg:pt-20  pb-20 lg:pb-28 px-5 bg-gray-200">
+        <section id="agency" className="pt-12 lg:pt-20  pb-20 lg:pb-28 px-5 bg-gray-200">
           <ServiceItem
             title="代理店事業"
             after="after:content-['大手キャリア様の販売代理店として活動をしています']"

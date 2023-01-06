@@ -2,11 +2,11 @@ import { useCallback } from "react";
 import useScrollVisible from "../../hooks/useScrollVisible";
 
 type Props = {
-  scrollTarget:() => void;
+  // scrollTarget:() => void;
   scrollTargetOffset:(offset:number) => void
 }
 
-const ScrollDown = ({scrollTarget,scrollTargetOffset}:Props) => {
+const ScrollDown = ({scrollTargetOffset}:Props) => {
 
   // const { handleClick } = useScrollVisible({offset}) 
 
