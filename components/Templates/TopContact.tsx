@@ -10,11 +10,11 @@ const TopContact = () => {
         <div className="group flex items-center justify-center translate-y-12 lg:translate-y-0 border bg-primary h-[50vh] lg:h-[65vh] ">
           <TopTitleText
             after="after:content-['お問い合わせ']"
-            top="top-10 lg:top-16"
+            top="top-10 lg:top-16 "
           >
             Contact
           </TopTitleText>
-          <div className=" translate-y-10 flex flex-col gap-10">
+          <div className=" translate-y-10 flex flex-col gap-5 lg:gap-10">
             <ContactButton
               width="w-80 lg:w-96"
               height="h-16 lg:h-20"

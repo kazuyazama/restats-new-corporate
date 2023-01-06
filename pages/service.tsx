@@ -20,7 +20,7 @@ const service = () => {
         <section className="px-5 mt-10 lg:mt-0 bg-primary relative ">
           <ServiceTitle
             title="SERVICE"
-            discription="弊社で行なっているサービスを紹介します"
+            discription="弊社のサービスを紹介します"
           />
         </section>
 
