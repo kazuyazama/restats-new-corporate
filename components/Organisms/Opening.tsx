@@ -28,7 +28,7 @@ const Opening = ({ isOpening, isOpeningText, }: Props) => {
   return (
     <div
       className={`fixed top-0 left-0 w-full h-full z-[9999] bg-primary overflow-hidden  ${
-        !isOpening && " animate-slide-trans-bottom "
+        !isOpening && " animate-slide-trans-bottom"
       } `}
     >
       <h1

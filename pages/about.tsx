@@ -42,7 +42,7 @@ const about = () => {
         {/* <span className="absolute w-full h-64 -mt-64 clip-path-triangle-rb bg-white"></span> */}
         <span className="absolute translate-y-1  w-full h-32 -mt-32 lg:h-64 lg:-mt-64 clip-path-triangle-new-rb bg-gray-200 "></span>
 
-        <section className="pt-10 pb-12 lg:pt-24 lg:pb-16 px-5  bg-gray-200">
+        <section className="pt-10 lg:pt-24 px-5  bg-gray-200">
           <div className="max-w-screen-xl mx-auto ">
             <div className=" flex flex-col lg:flex-row  justify-center lg:justify-around ">
               <div className=" basis-full space-y-10 lg:-translate-y-20 ">
@@ -63,22 +63,24 @@ const about = () => {
                 </p>
               </div>
 
-              <div className="basis-1/3 translate-y-12 text-end lg:translate-y-20 2xl:translate-y-16 ">
-                <div className="hidden lg:block">
+              <div className="basis-1/3 lg:translate-y- text-end 2xl:translate-y-16 ">
+                <div className="hidden lg:block ">
                 <Image
-                  src="/CEO.webp"
+                  src="/CEO3.png"
                   loader={({ src }) => src}
                   width={400}
-                  height={550}
-                  layout="responsive"
+                  height={600}
+                  // layout="responsive"
+                  className="  object-cover"
                 />
                 </div>
-                <div className="lg:hidden translate-y-1">
+                <div className="lg:hidden translate-y-10">
                 <Image
-                  src="/CEO.webp"
+                  src="/CEO3.png"
                   loader={({ src }) => src}
                   width={300}
-                  height={300}
+                  height={400}
+                  className="object-cover"
                 />
                 </div>
                 
