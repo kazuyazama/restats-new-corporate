@@ -15,7 +15,7 @@ const Trail = ({ children }:Props) => {
       from: { opacity: 0, y: 20, height: 0 },
     });
     return (
-      <div className="flex whitespace-nowrap  text-secondary tracking-widest text-4xl lg:text-5xl font-semibold">
+      <div className="flex whitespace-nowrap  text-secondary tracking-widest text-3xl lg:text-5xl font-semibold">
         {trail.map(({  ...style }, index) => (
             <animated.div key={index} style={ style }>{children[index]}</animated.div>
         ))}

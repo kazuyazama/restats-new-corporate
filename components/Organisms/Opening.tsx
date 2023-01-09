@@ -33,7 +33,7 @@ const Opening = ({ isOpening, isOpeningText, }: Props) => {
     >
       <h1
         // ref={splitRef}
-        className={` absolute top-1/2 z-[10000] left-1/2 -translate-x-1/2 -translate-y-1/2`}
+        className={` absolute top-1/2 z-[10000] left-1/2 -translate-x-1/2 -translate-y-1/2 m-auto`}
         // className={`absolute top-1/2 left-1/2 -translate-y-1/2 [&>span]:inline-block [&>span]:opacity-0 [&>span]:whitespace-nowrap [&>span]:overflow-hidden   ${isOpeningText && "[&>span]:animate-slide-width-right"}`}
       >
         {/* <h1 className={`whitespace-nowrap overflow-hidden text-secondary tracking-widest text-4xl lg:text-5xl font-semibold ${isOpeningText && "animate-slide-width-right"}`}>町田から世界へ</h1> */}
