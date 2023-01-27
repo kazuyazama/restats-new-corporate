@@ -12,9 +12,6 @@ type LayoutProps = Required<{
 const Layout = ({ children }: LayoutProps) => {
   const [isOpen, setIsOpen] = useState(false);
 
- 
-
-
   const toggleDrawer = () => {
     setIsOpen((prev) => !prev);
   };

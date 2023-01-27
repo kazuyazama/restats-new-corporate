@@ -31,7 +31,7 @@ const Footer = () => {
             <FooterNavItem path="/company">COMPANY</FooterNavItem>
             <FooterNavItem path="/partner">PARTNER</FooterNavItem>
             <FooterNavItem path="/contact">CONTACT</FooterNavItem>
-            <FooterNavItem path="privacy">PRIVACT POLICY</FooterNavItem>
+            <FooterNavItem path="privacy">PRIVACY POLICY</FooterNavItem>
           </ul>
         </nav>
 

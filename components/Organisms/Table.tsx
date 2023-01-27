@@ -7,8 +7,8 @@ type Props = {
 
 const Table = ({ profile }:{profile:Props}) => {
   return (
-    <table className="table-auto w-full border-separate border-spacing-11">
-      <thead className=" ">
+    <table className="table-auto min-w-full border-separate border-spacing-11">
+      <thead className="w-full ">
         <tr>
           <th className=" font-normal">
             <TopTitleText top="-top-10" after="after:content-['会社概要']">

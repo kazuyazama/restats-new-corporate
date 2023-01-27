@@ -75,7 +75,7 @@ const Top = () => {
           {trails.map((props,index) => (
             <animated.div
               key={index}
-              className="absolute w-full font-Allura left-4 lg:left-72  top-40 lg:top-80 text-6xl lg:text-7xl"
+              className="text-center absolute w-full font-Allura top-40 lg:top-80 text-6xl lg:text-7xl"
               style={props}
             >
               From Machida to the World
