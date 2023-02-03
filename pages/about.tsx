@@ -8,7 +8,8 @@ import Icon from "public/CEO.svg";
 import { NextSeo } from "next-seo";
 import { useInView } from "@react-spring/web";
 
-const about = () => {
+const About = () => {
+
   const [ref, inView] = useInView({
     rootMargin: "-10% 0%",
     once: true,
@@ -115,4 +116,4 @@ const about = () => {
   );
 };
 
-export default about;
+export default About;

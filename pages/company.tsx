@@ -63,7 +63,7 @@ const kyoto = {
   lng: 135.77838432442095,
 };
 
-const company = () => {
+const Company = () => {
   const [ref, inView] = useInView({
     rootMargin: "-10% 0%",
     once: true,
@@ -123,4 +123,4 @@ const company = () => {
   );
 };
 
-export default company;
+export default Company;

@@ -4,7 +4,7 @@ import TriangleRight from "../components/Atoms/TriangleRight";
 import ServiceItem from "../components/Organisms/ServiceItem";
 import ServiceTitle from "../components/Organisms/ServiceTitle";
 
-const service = () => {
+const Service = () => {
   return (
     <>
       <NextSeo
@@ -83,4 +83,4 @@ const service = () => {
   );
 };
 
-export default service;
+export default Service;

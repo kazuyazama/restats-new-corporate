@@ -4,7 +4,7 @@ import TriangleLeft from "../components/Atoms/TriangleLeft";
 import TriangleRight from "../components/Atoms/TriangleRight";
 import ServiceTitle from "../components/Organisms/ServiceTitle";
 
-const partner = () => {
+const Partner = () => {
 
 
   return (
@@ -37,4 +37,4 @@ const partner = () => {
   );
 };
 
-export default partner;
+export default Partner;
