@@ -11,10 +11,10 @@ type Props = {
   height: string;
 };
 
-const Card = ({ title, discription, src, path, bg, height, }: Props) => {
+const Card = ({ title, discription, src, path, bg, height }: Props) => {
   return (
     <>
-      <AnimeImage bg={bg} height={height} path={path}  />
+      <AnimeImage bg={bg} height={height} path={path} />
 
       <h3 className="mt-4 text-xl font-bold text-gray-900">{title}</h3>
 

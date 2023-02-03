@@ -8,7 +8,6 @@ import TextAreaLabel from "../Organisms/TextAreaLabel";
 
 import type { FormValues } from "../../types/formValues";
 import TriangleLeft from "../Atoms/TriangleLeft";
-import TriangleRight from "../Atoms/TriangleRight";
 
 const Input = () => {
   const router = useRouter();

@@ -1,11 +1,13 @@
 import TopTitleText from "../Atoms/TopTitleText";
 
 type Props = {
-  title: string;
-  discription: string[];
-}[];
+  profile:{
+    title: string;
+    discription: string[];
+  }[],
+}
 
-const Table = ({ profile }:{profile:Props}) => {
+const Table = ({ profile }:Props) => {
   return (
     <table className="table-auto min-w-full border-separate border-spacing-11">
       <thead className="w-full ">
@@ -18,12 +20,14 @@ const Table = ({ profile }:{profile:Props}) => {
         </tr>
       </thead>
 
-      <tbody className="w-full">
+
+      <tbody className="w-full ">
         {profile.map((li) => (
           <tr
             key={li.title}
-            className="flex gap-5 py-5 items-center border-t last:border-y  border-black "
+            className="flex gap-5 py-5 items-center border-t last:border-y animate-fade-in-bottom  border-black "
           >
+            
             <td className="basis-1/3 ">{li.title}</td>
 
             <td className="basis-full">
@@ -43,6 +47,8 @@ const Table = ({ profile }:{profile:Props}) => {
           </tr>
         ))}
       </tbody>
+
+
     </table>
   );
 };

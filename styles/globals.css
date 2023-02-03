@@ -64,6 +64,10 @@ clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%)
 
 
 
+.animation-delay {
+	animation-name: slide-width-right; /*--アニメーション名--*/
+	animation-delay: 3s; /*--時間--*/
+}
 
 
 

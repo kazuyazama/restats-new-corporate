@@ -40,7 +40,8 @@ module.exports = {
        "slide-width-right": "slide-width-right 1.3s linear forwards",
        "slide-trans-right": "slide-trans-right 6s ease-in-out forwards",
        "slide-trans-bottom": "slide-trans-bottom 0.8s ease-in-out  forwards",
-       "kenburns-top": "kenburns-top 7s ease   forwards"
+       "kenburns-top": "kenburns-top 7s ease   forwards",
+       "fade-in-bottom": "fade-in-bottom 1s  ease-in-out both"
       },
       keyframes: {
         "scale-in-left": {
@@ -100,7 +101,14 @@ module.exports = {
               transform: "scale(1.20) ",
               "transform-origin": "center"
           }
+        },
+        "fade-in-bottom": {
+          from: {
+            transform: "translate(0, 50%)",
+            opacity: 0,
+          
         }
+      },
     
     },
      

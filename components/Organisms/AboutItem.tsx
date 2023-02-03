@@ -3,8 +3,8 @@ import AboutBox from "../Atoms/AboutBox";
 const AboutItem = () => {
   return (
     <section id="about" className="pt-10 lg:pb-5  px-5 bg-gray-200 ">
-      <div className="max-w-screen-xl mx-auto">
-        <div className="flex flex-col text-center  gap-10 pb-5">
+      <div className="max-w-screen-xl mx-auto ">
+        <div className="flex flex-col text-center  gap-10 pb-5 animate-fade-in-bottom">
           <h1 className="text-2xl lg:text-4xl font-semibold ">
             人々に最大限の貢献をする。それは挑戦し続けること。
           </h1>
@@ -15,7 +15,7 @@ const AboutItem = () => {
           </h3>
         </div>
         <span className="inline-block h-3"></span>
-        <div className="space-y-10  border py-10 ">
+        <div className="space-y-10  border py-10 animate-fade-in-bottom [animation-delay:300ms] ">
           <h1 className="text-2xl lg:text-4xl py-5 text-center">
             私たちが大切にしていること
           </h1>

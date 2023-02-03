@@ -1,9 +1,12 @@
+import { useInView } from "@react-spring/web";
 import { NextSeo } from "next-seo";
 import TriangleLeft from "../components/Atoms/TriangleLeft";
 import TriangleRight from "../components/Atoms/TriangleRight";
 import ServiceTitle from "../components/Organisms/ServiceTitle";
 
 const partner = () => {
+
+
   return (
     <>
       <NextSeo
@@ -20,8 +23,8 @@ const partner = () => {
         </section>
         <TriangleLeft bgColor="bg-gray-200" />
 
-        <section id="about" className="pt-36 pb-52 bg-gray-200 px-5">
-          <div className="text-3xl lg:text-4xl font-semibold grid place-items-center">
+        <section  id="about" className="pt-36 pb-52 bg-gray-200 px-5 ">
+          <div className="text-3xl lg:text-4xl font-semibold grid place-items-center animate-fade-in-bottom">
             現在改修中です
           </div>
         </section>
