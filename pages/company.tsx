@@ -6,7 +6,7 @@ import TriangleLeft from "../components/Atoms/TriangleLeft";
 import TriangleRight from "../components/Atoms/TriangleRight";
 import { NextSeo } from "next-seo";
 import AccessItem from "../components/Organisms/AccessItem";
-import ScrollFade from "../components/ScrollFade";
+import ScrollFade from "../components/Organisms/ScrollFade";
 
 const profile = [
   {
@@ -106,7 +106,6 @@ const Company = () => {
               <ScrollFade propsDelay={0.6}>
                 <AccessItem
                   city={kyoto}
-                  delay="[animation-delay:300ms]"
                   title="KYOTO OFFICE"
                 >
                   <p>〒610-0313</p>

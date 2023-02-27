@@ -7,7 +7,7 @@ import ServiceTitle from "../components/Organisms/ServiceTitle";
 import Icon from "public/CEO.svg";
 import { NextSeo } from "next-seo";
 import { useInView } from "@react-spring/web";
-import ScrollFade from "../components/ScrollFade";
+import ScrollFade from "../components/Organisms/ScrollFade";
 
 const About = () => {
   const [ref, inView] = useInView({

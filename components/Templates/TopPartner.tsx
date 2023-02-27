@@ -1,6 +1,6 @@
 import { useInView } from "@react-spring/web";
 import TopTitleText from "../Atoms/TopTitleText";
-import ScrollFade from "../ScrollFade";
+import ScrollFade from "../Organisms/ScrollFade";
 
 const TopParther = () => {
   return (

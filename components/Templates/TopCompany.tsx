@@ -1,7 +1,7 @@
 import MoreButton from "../Atoms/MoreButton";
 import TopTitleText from "../Atoms/TopTitleText";
 import AnimeImage from "../Organisms/AnimeImage";
-import ScrollFade from "../ScrollFade";
+import ScrollFade from "../Organisms/ScrollFade";
 
 const TopCompany = () => {
   return (

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import MoreButton from "../Atoms/MoreButton";
 import TopTitleText from "../Atoms/TopTitleText";
-import ScrollFade from "../ScrollFade";
+import ScrollFade from "../Organisms/ScrollFade";
 
 const TopAbout = () => {
   return (

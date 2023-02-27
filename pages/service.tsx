@@ -3,7 +3,7 @@ import TriangleLeft from "../components/Atoms/TriangleLeft";
 import TriangleRight from "../components/Atoms/TriangleRight";
 import ServiceItem from "../components/Organisms/ServiceItem";
 import ServiceTitle from "../components/Organisms/ServiceTitle";
-import ScrollFade from "../components/ScrollFade";
+import ScrollFade from "../components/Organisms/ScrollFade";
 
 const Service = () => {
   return (

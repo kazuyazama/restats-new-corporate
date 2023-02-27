@@ -2,7 +2,7 @@ import Image from "next/image";
 import ContactButton from "../Atoms/ContactButton";
 import MoreButton from "../Atoms/MoreButton";
 import TopTitleText from "../Atoms/TopTitleText";
-import ScrollFade from "../ScrollFade";
+import ScrollFade from "../Organisms/ScrollFade";
 
 const TopContact = () => {
   return (

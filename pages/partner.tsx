@@ -2,7 +2,7 @@ import { NextSeo } from "next-seo";
 import TriangleLeft from "../components/Atoms/TriangleLeft";
 import TriangleRight from "../components/Atoms/TriangleRight";
 import ServiceTitle from "../components/Organisms/ServiceTitle";
-import ScrollFade from "../components/ScrollFade";
+import ScrollFade from "../components/Organisms/ScrollFade";
 
 const Partner = () => {
   return (

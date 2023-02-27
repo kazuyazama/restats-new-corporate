@@ -1,7 +1,7 @@
 import MoreButton from "../Atoms/MoreButton";
 import TopTitleText from "../Atoms/TopTitleText";
 import Card from "../Organisms/Card";
-import ScrollFade from "../ScrollFade";
+import ScrollFade from "../Organisms/ScrollFade";
 
 const TopService = () => {
   return (
