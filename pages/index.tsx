@@ -1,4 +1,4 @@
-import { createRef, useEffect, useState } from "react";
+import { createRef, Suspense, useEffect, useState } from "react";
 import { News } from "../types/News";
 import { client } from "../libs/client.js";
 import useTargetScroll from "../hooks/useTargetScroll";
@@ -14,6 +14,7 @@ import ScrollDown from "../components/Atoms/ScrollDown";
 import TopNews from "../components/Templates/TopNews";
 import TriangleLeft from "../components/Atoms/TriangleLeft";
 import TriangleRight from "../components/Atoms/TriangleRight";
+
 
 export const getStaticProps = async () => {
   const data = await client.get({
@@ -51,6 +52,11 @@ export default function Home({ data }: { data: News }) {
     timeOut();
   }, []);
 
+  // function Loader() {
+  //   const { active, progress, errors, item, loaded, total } = useProgress()
+  //   return <Html center>{loaded && <Opening />}</Html>
+  // }
+
   // useEffect(() => {
   //   if (!"load") return;
   //   window.addEventListener("load", timeOut);
@@ -65,72 +71,73 @@ export default function Home({ data }: { data: News }) {
         isOpeningText={isOpeningText}
       />
 
-      {layout && (
-        <div className=" ">
-          <Particle />
-          <div className="overflow-hidden w-full lg:-mt-28">
-            <section className="  lg:animate-kenburns-top  h-[85vh] lg:h-[100vh] bg-machida2  bg-cover bg-center relative -z-20  ">
-              <Top />
-            </section>
-          </div>
+      {/* {layout && ( */}
+      <div className=" ">
+        {/* <Particle /> */}
 
-          <div className="absolute top-[78vh] z-10 lg:top-[90vh] right-20 lg:left-[50vw] ">
-            <ScrollDown scrollTargetOffset={scrollTargetOffset} />
-          </div>
-
-          <TriangleLeft bgColor="bg-gray-200" />
-          <section
-            ref={ref}
-            id="about"
-            className="pt-40 pb-20 lg:py-20 bg-gray-200 overflow-hidden px-5  "
-          >
-            <TopAbout />
+        <div className="w-full overflow-hidden lg:-mt-28">
+          <section className=" relative -z-20 h-[85vh]  bg-machida2 bg-cover bg-center lg:h-[100vh]  ">
+            <Top />
           </section>
-
-          <TriangleRight bgColor="bg-gray-200" />
-
-          <section
-            id="service"
-            className="py-52 lg:pt-72 lg:pb-[22rem] overflow-hidden  px-5"
-          >
-            <TopService />
-          </section>
-
-          <TriangleLeft bgColor="bg-gray-200" />
-          <section
-            id="company"
-            className="py-10 lg:pt-16  bg-gray-200 overflow-hidden  px-5"
-          >
-            <TopCompany />
-          </section>
-
-          <TriangleRight bgColor="bg-gray-200" />
-          <section
-            id="partner"
-            className="pt-72 pb-60 lg:py-[50vh] overflow-hidden  px-5"
-          >
-            <TopParther />
-          </section>
-
-          <TriangleLeft bgColor="bg-gray-200" />
-          <section
-            id="contact"
-            className="lg:py-12  bg-gray-200 overflow-hidden px-5"
-          >
-            <TopContact />
-          </section>
-
-          <TriangleRight bgColor="bg-gray-200" />
-          <section
-            id="partner"
-            className="py-52 lg:py-[40vh] overflow-hidden  px-5"
-          >
-            <TopNews data={data} />
-          </section>
-
-          {/* <TriangleLeft bgColor="bg-gray-100" /> */}
         </div>
-      )}
+
+        <div className="absolute top-[78vh] right-20 z-10 lg:top-[90vh] lg:left-[50vw] ">
+          <ScrollDown scrollTargetOffset={scrollTargetOffset} />
+        </div>
+
+        <TriangleLeft bgColor="bg-gray-200" />
+        <section
+          ref={ref}
+          id="about"
+          className="overflow-hidden bg-gray-200 px-5 pt-40 pb-20 lg:py-20  "
+        >
+          <TopAbout />
+        </section>
+
+        <TriangleRight bgColor="bg-gray-200" />
+
+        <section
+          id="service"
+          className="overflow-hidden py-52 px-5 lg:pt-72  lg:pb-[22rem]"
+        >
+          <TopService />
+        </section>
+
+        <TriangleLeft bgColor="bg-gray-200" />
+        <section
+          id="company"
+          className="overflow-hidden bg-gray-200  py-10 px-5  lg:pt-16"
+        >
+          <TopCompany />
+        </section>
+
+        <TriangleRight bgColor="bg-gray-200" />
+        <section
+          id="partner"
+          className="overflow-hidden px-5 pt-72 pb-60  lg:py-[50vh]"
+        >
+          <TopParther />
+        </section>
+
+        <TriangleLeft bgColor="bg-gray-200" />
+        <section
+          id="contact"
+          className="overflow-hidden  bg-gray-200 px-5 lg:py-12"
+        >
+          <TopContact />
+        </section>
+
+        <TriangleRight bgColor="bg-gray-200" />
+        <section
+          id="partner"
+          className="overflow-hidden py-52 px-5  lg:py-[40vh]"
+        >
+          <TopNews data={data} />
+        </section>
+
+        {/* <TriangleLeft bgColor="bg-gray-100" /> */}
+      </div>
+      {/* )} */}
     </>
   );
 }

@@ -5,8 +5,8 @@ import Table from "../components/Organisms/Table";
 import TriangleLeft from "../components/Atoms/TriangleLeft";
 import TriangleRight from "../components/Atoms/TriangleRight";
 import { NextSeo } from "next-seo";
-import { useInView } from "@react-spring/web";
 import AccessItem from "../components/Organisms/AccessItem";
+import ScrollFade from "../components/ScrollFade";
 
 const profile = [
   {
@@ -64,11 +64,6 @@ const kyoto = {
 };
 
 const Company = () => {
-  const [ref, inView] = useInView({
-    rootMargin: "-10% 0%",
-    once: true,
-  });
-
   return (
     <>
       <NextSeo
@@ -85,8 +80,10 @@ const Company = () => {
         </section>
         <TriangleLeft bgColor="bg-gray-200" />
         <section id="about" className="bg-gray-200 pt-20 pb-2 ">
-          <div ref={ref} className="relative mx-auto max-w-screen-xl">
-            <Table profile={profile} />
+          <div className="relative mx-auto max-w-screen-xl">
+            <ScrollFade>
+              <Table profile={profile} />
+            </ScrollFade>
           </div>
         </section>
         <TriangleRight bgColor="bg-gray-200" />
@@ -98,21 +95,24 @@ const Company = () => {
               ACCESS
             </TopTitleText>
 
-            <div ref={ref} className="grid  gap-14 py-32 lg:grid-cols-2">
-              <AccessItem city={tokyo} title="TOKYO OFFICE" inView={inView}>
-                <p>〒194-0022</p>
-                <p>東京都町田市森野6-359 横山第2ビル 2-A</p>
-              </AccessItem>
+            <div className="grid  gap-14 py-32 lg:grid-cols-2">
+              <ScrollFade>
+                <AccessItem city={tokyo} title="TOKYO OFFICE">
+                  <p>〒194-0022</p>
+                  <p>東京都町田市森野6-359 横山第2ビル 2-A</p>
+                </AccessItem>
+              </ScrollFade>
 
-              <AccessItem
-                city={kyoto}
-                delay="[animation-delay:300ms]"
-                title="KYOTO OFFICE"
-                inView={inView}
-              >
-                <p>〒610-0313</p>
-                <p>京都府京田辺市三山木垣ノ内６９ 大隈ビル 203</p>
-              </AccessItem>
+              <ScrollFade propsDelay={0.6}>
+                <AccessItem
+                  city={kyoto}
+                  delay="[animation-delay:300ms]"
+                  title="KYOTO OFFICE"
+                >
+                  <p>〒610-0313</p>
+                  <p>京都府京田辺市三山木垣ノ内６９ 大隈ビル 203</p>
+                </AccessItem>
+              </ScrollFade>
             </div>
           </div>
         </section>

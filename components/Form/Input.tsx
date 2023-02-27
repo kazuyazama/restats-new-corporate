@@ -8,6 +8,7 @@ import TextAreaLabel from "../Organisms/TextAreaLabel";
 
 import type { FormValues } from "../../types/formValues";
 import TriangleLeft from "../Atoms/TriangleLeft";
+import ScrollFade from "../ScrollFade";
 
 const Input = () => {
   const router = useRouter();
@@ -32,6 +33,9 @@ const Input = () => {
       <TriangleLeft bgColor="bg-gray-200" />
       <section className="bg-gray-200 pt-10 pb-20 px-5">
         <div className=" max-w-screen-xl mx-auto">
+          <ScrollFade>
+
+       
           <form
             onSubmit={handleSubmit(onSubmit)}
             action=""
@@ -105,6 +109,7 @@ const Input = () => {
               </button>
             </div>
           </form>
+          </ScrollFade>
         </div>
       </section>
 

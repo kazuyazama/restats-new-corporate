@@ -1,25 +1,18 @@
-import { useInView } from "@react-spring/web";
 import MoreButton from "../Atoms/MoreButton";
 import TopTitleText from "../Atoms/TopTitleText";
 import AnimeImage from "../Organisms/AnimeImage";
+import ScrollFade from "../ScrollFade";
 
 const TopCompany = () => {
-  const [ref, inView] = useInView({
-    rootMargin: "-10% 0%",
-    once: true,
-  });
   return (
-    <div
-      ref={ref}
-      className="relative mx-auto flex  max-w-screen-xl flex-col justify-center lg:flex-row "
-    >
+    <div className="relative mx-auto flex  max-w-screen-xl flex-col justify-center lg:flex-row ">
       <div className=" mb-32 basis-1/2 lg:mb-0">
         <TopTitleText after="after:content-['会社情報']" top="top-0">
           Company
         </TopTitleText>
       </div>
-      {inView && (
-        <div className="basis-full animate-fade-in-bottom space-y-4">
+      <div className="basis-full  space-y-4">
+        <ScrollFade>
           <AnimeImage
             bg="bg-machida"
             title="From Machida to the World"
@@ -37,8 +30,8 @@ const TopCompany = () => {
               MORE
             </MoreButton>
           </div>
-        </div>
-      )}
+        </ScrollFade>
+      </div>
     </div>
   );
 };

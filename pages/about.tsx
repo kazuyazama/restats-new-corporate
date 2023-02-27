@@ -7,9 +7,9 @@ import ServiceTitle from "../components/Organisms/ServiceTitle";
 import Icon from "public/CEO.svg";
 import { NextSeo } from "next-seo";
 import { useInView } from "@react-spring/web";
+import ScrollFade from "../components/ScrollFade";
 
 const About = () => {
-
   const [ref, inView] = useInView({
     rootMargin: "-10% 0%",
     once: true,
@@ -55,8 +55,8 @@ const About = () => {
         >
           <div className="mx-auto max-w-screen-xl ">
             <div className=" flex flex-col justify-center  lg:flex-row lg:justify-around ">
-              {inView && (
-                <div className=" basis-full animate-fade-in-bottom space-y-10 ">
+              <ScrollFade>
+                <div className=" basis-full  space-y-10 ">
                   <h1 className="text-2xl font-semibold lg:text-4xl">
                     成功するまでやり続ける。
                   </h1>
@@ -73,7 +73,7 @@ const About = () => {
                     そんな思いから弊社を設立しました。
                   </p>
                 </div>
-              )}
+              </ScrollFade>
 
               <div className="basis-1/3 text-end lg:-translate-y-24  ">
                 <div className="hidden lg:block ">

@@ -1,5 +1,15 @@
-import React from "react";
-import { animated, useSpring, useTrail } from "@react-spring/web";
+import { Canvas } from "@react-three/fiber";
+import { Html, Loader, useProgress } from "@react-three/drei";
+import dynamic from "next/dynamic";
+
+// function Loader() {
+//   const { active, progress, errors, item, loaded, total } = useProgress()
+//   return <Html center>{progress} % Loading...</Html>
+// }
+
+const DynamicEarth = dynamic(() => import("../Organisms/Earth"), {
+  loading: () => <Html>Loading...</Html>,
+});
 
 const Top = () => {
   // const targetRef = useRef(null);
@@ -50,43 +60,20 @@ const Top = () => {
   //   return () => ctx.revert();
   // }, []);
 
-
-  //react-spring の設定
-
-  // const [open, set] = useState(true);
-
-  const trails = useTrail(1, {
-    from: { opacity: 0 },
-    to: { opacity: 1 },
-  });
-
- 
-
   return (
     <div className="px-5 ">
-      <div className=" relative max-w-screen-xl mx-auto">
-        <div className="pt-28 lg:pt-40 grid place-items-center  text-white z-10 space-y-4 ">
-          {/* <h1 id="h1" className="text-3xl lg:text-5xl ">
-            ワクワクを価値あるものに。
-          </h1> */}
-          {/* <p id="p" className="text-lg">
-            ワクワクをカタチにするだけではなく、価値あるものにしていくクリエイトカンパニーです。
-          </p> */}
-          {trails.map((props,index) => (
-            <animated.div
-              key={index}
-              className="text-center absolute w-full font-Allura top-40 lg:top-80 text-6xl lg:text-7xl"
-              style={props}
-            >
-              From Machida to the World
-            </animated.div>
-          ))}
-
-        
-
-        
-
-          {/* <div className="absolute w-full font-Allura left-4 lg:left-72  top-40 lg:top-80 text-6xl lg:text-7xl ">From Machida to the World</div> */}
+      <div className=" relative mx-auto max-w-screen-xl">
+        <div className="z-10 grid place-items-center space-y-4  pt-28 text-white lg:pt-40 ">
+          <div className=" relative  z-50 w-full text-center font-Allura text-6xl lg:top-24 lg:text-8xl 2xl:top-44">
+            From Machida to the World
+          </div>
+          <div className="  absolute -top-52 h-screen w-full lg:-top-48 lg:h-[120vh] 2xl:-top-52">
+            <Canvas >
+              {/* <ThreeParticles /> */}
+              <pointLight color="#ffffff" position={[10, 10, 10]} />
+              <DynamicEarth />
+            </Canvas>
+          </div>
         </div>
 
         {/* <div className=" h-[95vh]  w-full absolute -top-16 ">
