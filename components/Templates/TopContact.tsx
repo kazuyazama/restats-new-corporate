@@ -6,7 +6,7 @@ import ScrollFade from "../Organisms/ScrollFade";
 
 const TopContact = () => {
   return (
-    <div className=" mx-auto grid grid-cols-2 place-items-center max-w-screen-xl justify-center lg:flex-row ">
+    <div className=" mx-auto  grid lg:grid-cols-2 place-items-center max-w-screen-xl justify-center  ">
       <div className="w-full  ">
         <ScrollFade>
           <div className="group flex h-[55vh] translate-y-12 items-center justify-center rounded-3xl border lg:translate-y-0 ">
