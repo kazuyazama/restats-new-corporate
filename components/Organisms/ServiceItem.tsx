@@ -13,14 +13,9 @@ type Props = {
 };
 
 const ServiceItem = ({ title, after, children, path, image }: Props) => {
-  const [ref, inView] = useInView({
-    rootMargin: "-10% 0%",
-    once: true,
-  });
+
   return (
-    <div ref={ref} className={`relative mx-auto max-w-screen-xl  `}>
-      {inView && (
-        <>
+    <div className={`relative mx-auto max-w-screen-xl  `}>
           <TopTitleText top="top-0" after={after}>
             {title}
           </TopTitleText>
@@ -48,8 +43,6 @@ const ServiceItem = ({ title, after, children, path, image }: Props) => {
               )}
             </div>
           </div>
-        </>
-      )}
     </div>
   );
 };

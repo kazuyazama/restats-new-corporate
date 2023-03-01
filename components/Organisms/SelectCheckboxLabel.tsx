@@ -14,7 +14,7 @@ const SelectCheckboxLabel = ({
 }: InputBasic) => {
   return (
     <>
-      <dt className={`col-span-1  ${errors && "mb-2"} `}>
+      <dt className={`col-span-1 ${errors && "mb-2"} `}>
         <Label title={title} id={id} required={required} />
       </dt>
       <dd className="col-span-2 space-y-4">
