@@ -6,10 +6,10 @@ import ScrollFade from "../Organisms/ScrollFade";
 
 const TopContact = () => {
   return (
-    <div className="  flex max-w-screen-xl flex-col items-center  justify-center lg:flex-row ">
-      <div className="w-full  lg:w-3/5">
+    <div className=" mx-auto grid grid-cols-2 place-items-center max-w-screen-xl justify-center lg:flex-row ">
+      <div className="w-full  ">
         <ScrollFade>
-          <div className="group flex h-[55vh] translate-y-12 items-center justify-center rounded-3xl border  lg:h-[55vh] lg:translate-y-0 ">
+          <div className="group flex h-[55vh] translate-y-12 items-center justify-center rounded-3xl border lg:translate-y-0 ">
             <TopTitleText
               after="after:content-['お問い合わせ']"
               top="top-7 lg:top-16 "
