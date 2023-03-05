@@ -14,7 +14,7 @@ const Transaction = () => {
     },
     {
       title: "住所",
-      description: "〒194-0022 東京都町田市森野6-359 横山第二ビル 2-A",
+      description: "〒195-0056 東京都町田市広袴2-11-6",
     },
     {
       title: "電話番号",
