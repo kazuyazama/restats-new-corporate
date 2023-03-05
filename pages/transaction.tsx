@@ -44,7 +44,8 @@ const Transaction = () => {
     },
     {
       title: "商品の引渡時期",
-      description: "個別のご契約の定めに従います",
+      description: "Web開発\n",
+      list:"サーバー・ドメイン費用：個別のご契約の定めに従います\n初期費用：個別のご契約の定めに従います"
     },
     {
       title: "返品・交換",
@@ -78,9 +79,9 @@ const Transaction = () => {
               <h2 className="pb-10 text-lg">特定商取引法に基づく表示</h2>
               <ul className="grid gap-8">
                 {transactionsData.map((li) => (
-                  <li className="flex flex-col gap-4  lg:flex-row">
+                  <li key={li.title} className="flex flex-col gap-4  lg:flex-row">
                     <span className=" basis-1/3 font-semibold">{li.title}</span>
-                    <span className=" basis-full font-normal whitespace-pre-line">{li.description}</span>
+                    <span className=" basis-full font-normal whitespace-pre-line">{li.description} {li.list && li.list }</span>
                   </li>
                 ))}
               </ul>
