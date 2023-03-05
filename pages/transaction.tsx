@@ -40,12 +40,12 @@ const Transaction = () => {
     },
     {
       title: "支払時期",
-      description: "個別のご契約の定めに従います",
+      description: "Web開発\n",
+      list:"サーバー・ドメイン費用：個別のご契約の定めに従います\n初期費用：個別のご契約の定めに従います"
     },
     {
       title: "商品の引渡時期",
-      description: "Web開発\n",
-      list:"サーバー・ドメイン費用：個別のご契約の定めに従います\n初期費用：個別のご契約の定めに従います"
+      description: "個別のご契約の定めに従います",
     },
     {
       title: "返品・交換",
