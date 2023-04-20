@@ -1,3 +1,4 @@
+import classNames from "classnames";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import type { ReactNode } from "react";
@@ -5,28 +6,23 @@ import type { ReactNode } from "react";
 type Props = {
   children: ReactNode;
   borderWidth: string;
-  to: string;
+  href: string;
 };
 
-const ListItem = ({ borderWidth, children, to }: Props) => {
+const ListItem = ({ borderWidth, children, href }: Props) => {
   const router = useRouter();
 
-  const underLine = `${borderWidth} before:border-b before:border-secondary before:absolute before:top-8`;
-
   return (
-    <>
+    <Link href={href}>
       <li
-        className={`relative  ${underLine} before:opacity-0 before:hover:animate-scale-in-left`}
+        className={classNames(
+          router.pathname === href && "border-b border-secondary",
+          "relative pb-1 tracking-wider duration-100 hover:border-b hover:border-secondary "
+        )}
       >
-        <Link href={to}>
-          <button
-            className={` tracking-wider ${router.pathname === to && underLine}`}
-          >
-            {children}
-          </button>
-        </Link>
+        {children}
       </li>
-    </>
+    </Link>
   );
 };
 

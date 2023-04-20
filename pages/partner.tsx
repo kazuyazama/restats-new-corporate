@@ -23,7 +23,7 @@ const Partner = () => {
 
         <section id="about" className="bg-gray-200 px-5 pt-36 pb-52 ">
           <ScrollFade>
-            <div className="grid  place-items-center text-3xl font-semibold lg:text-4xl">
+            <div className="grid  place-items-center text-2xl font-semibold lg:text-3xl">
               現在改修中です
             </div>
           </ScrollFade>

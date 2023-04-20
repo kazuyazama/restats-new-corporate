@@ -1,23 +1,24 @@
 type Props = {
-    title:string;
-    id:string;
-    required:boolean;
-}
+  title: string;
+  id: string;
+  required: boolean;
+};
 
-const Label = ({title,id,required}:Props) => {
-    return (
-        <label
-        htmlFor={id}
-        className={` flex items-center gap-5  min-w-full whitespace-nowrap  
-        ${required === true ? "before:content-['必須'] before:bg-black" : "before:content-['任意'] before:bg-primary" }  
-        } before:text-white before:py-1 before:px-1 before:w-10 before:text-center  before:text-xs   `}
-        >
-         
-           
-           
-        {title}
-        </label>
-    );
-}
+const Label = ({ title, id, required }: Props) => {
+  return (
+    <label
+      htmlFor={id}
+      className={` flex min-w-full items-center  gap-5 whitespace-nowrap  
+        ${
+          required === true
+            ? "before:bg-black before:content-['必須']"
+            : "before:bg-primary before:content-['任意']"
+        }  
+        } before:w-10 before:py-1 before:px-1 before:text-center before:text-xs  before:text-white   `}
+    >
+      {title}
+    </label>
+  );
+};
 
 export default Label;

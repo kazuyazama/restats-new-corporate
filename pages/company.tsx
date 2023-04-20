@@ -16,7 +16,7 @@ const profile = [
   {
     title: "所在地",
     discription: [
-      "東京本社：東京都町田市森野6-359 横山第二​ビル 2-A",
+      "東京本社：東京都町田市広袴2-11-6",
       "京都支店：京都府京田辺市三山木垣ノ内69 大隅ビル 203",
     ],
   },
@@ -48,14 +48,9 @@ const profile = [
 
 //@react-google-maps/api の設定
 
-const center = {
-  lat: 35.776072247629266,
-  lng: 137.81963278291485,
-};
-
 const tokyo = {
-  lat: 35.55086933132063,
-  lng: 139.43185558163188,
+  lat: 35.597683539130635,
+  lng: 139.46966262170196,
 };
 
 const kyoto = {
@@ -98,18 +93,15 @@ const Company = () => {
             <div className="grid  gap-14 py-32 lg:grid-cols-2">
               <ScrollFade>
                 <AccessItem city={tokyo} title="TOKYO OFFICE">
-                  <p>〒194-0022</p>
-                  <p>東京都町田市森野6-359 横山第2ビル 2-A</p>
+                  <p>〒195-0056</p>
+                  <p>東京都町田市広袴2-11-6</p>
                 </AccessItem>
               </ScrollFade>
 
               <ScrollFade propsDelay={0.6}>
-                <AccessItem
-                  city={kyoto}
-                  title="KYOTO OFFICE"
-                >
+                <AccessItem city={kyoto} title="KYOTO OFFICE">
                   <p>〒610-0313</p>
-                  <p>京都府京田辺市三山木垣ノ内６９ 大隈ビル 203</p>
+                  <p>京都府京田辺市三山木垣ノ内69 大隈ビル 203</p>
                 </AccessItem>
               </ScrollFade>
             </div>

@@ -3,6 +3,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import useScrollVisible from "../../hooks/useScrollVisible";
 import PcNav from "../Organisms/PcNav";
+import classNames from "classnames";
 
 type Props = {
   showBelow: number;
@@ -19,21 +20,19 @@ const Header = ({ showBelow, offset }: Props) => {
       <header
         aria-label="Page Header "
         id="top"
-        className="fixed w-full lg:static z-[99]  "
+        className="fixed z-[99] w-full lg:static  "
       >
         <div
-          className={`w-full ${
+          className={classNames(
             show
               ? "bg-primary"
               : router.pathname !== "/"
               ? "bg-primary"
-              : "bg-transparent"
-          } duration-200 px-2 py-1 lg:p-5 `}
-          // className={`w-full fixed z-30 mx-auto p-5 lg:p-8 ${
-          //   isVisible && "bg-black opacity-50 "
-          // }`}
+              : "bg-transparent",
+            "w-full px-2 py-1 duration-200 lg:p-5"
+          )}
         >
-          <div className="flex items-center justify-between max-w-screen-xl mx-auto">
+          <div className="mx-auto flex max-w-screen-xl items-center justify-between">
             <Link href="/">
               <div className="cursor-pointer">
                 <div className=" hidden lg:inline-flex">
