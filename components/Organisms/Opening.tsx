@@ -1,4 +1,3 @@
-import { RefObject, useEffect } from "react";
 import Trail from "../Atoms/Trail";
 
 type Props = {

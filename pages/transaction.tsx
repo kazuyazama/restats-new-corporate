@@ -17,11 +17,6 @@ const Transaction = () => {
       description: "〒195-0056 東京都町田市広袴2-11-6",
     },
     {
-      title: "電話番号",
-      description:
-        "042-866-3979\n受付時間 12:00-21:00（土日祝を除く）※受付時間外の場合は、メールにてお問い合わせください。",
-    },
-    {
       title: "メールアドレス",
       description: "info@restarts.co.jp",
     },
@@ -41,7 +36,7 @@ const Transaction = () => {
     {
       title: "支払時期",
       description: "Web開発\n",
-      list:"サーバー・ドメイン費用：個別のご契約の定めに従います\n初期費用：個別のご契約の定めに従います"
+      list: "サーバー・ドメイン費用：個別のご契約の定めに従います\n初期費用：個別のご契約の定めに従います",
     },
     {
       title: "商品の引渡時期",
@@ -79,9 +74,14 @@ const Transaction = () => {
               <h2 className="pb-10 text-lg">特定商取引法に基づく表示</h2>
               <ul className="grid gap-8">
                 {transactionsData.map((li) => (
-                  <li key={li.title} className="flex flex-col gap-4  lg:flex-row">
+                  <li
+                    key={li.title}
+                    className="flex flex-col gap-4  lg:flex-row"
+                  >
                     <span className=" basis-1/3 font-semibold">{li.title}</span>
-                    <span className=" basis-full font-normal whitespace-pre-line">{li.description} {li.list && li.list }</span>
+                    <span className=" basis-full whitespace-pre-line font-normal">
+                      {li.description} {li.list && li.list}
+                    </span>
                   </li>
                 ))}
               </ul>

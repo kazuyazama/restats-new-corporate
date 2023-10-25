@@ -7,7 +7,6 @@ import Input from "../../components/Form/Input";
 const Contact = () => {
   const router = useRouter();
   const isConfirm = router.query.confirm;
-  console.log(isConfirm);
 
   const methods = useForm({
     //初回のバリデーション実行後、次のバリデーション実行タイミング

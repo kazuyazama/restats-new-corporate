@@ -42,7 +42,7 @@ const profile = [
   },
   {
     title: "TEL",
-    discription: ["042-866-3979（代表）"],
+    discription: ["070-6045-1993"],
   },
 ];
 

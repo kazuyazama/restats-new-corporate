@@ -29,7 +29,7 @@ const Footer = () => {
             <FooterNavItem path="/">ABOUT</FooterNavItem>
             <FooterNavItem path="/service">SERVICE</FooterNavItem>
             <FooterNavItem path="/company">COMPANY</FooterNavItem>
-            <FooterNavItem path="/partner">PARTNER</FooterNavItem>
+            {/* <FooterNavItem path="/partner">PARTNER</FooterNavItem> */}
             <FooterNavItem path="/contact">CONTACT</FooterNavItem>
             <FooterNavItem path="privacy">PRIVACY POLICY</FooterNavItem>
             <FooterNavItem path="transaction">TRANSACTION</FooterNavItem>

@@ -28,7 +28,7 @@ const ServiceItem = ({ title, after, children, path, image }: Props) => {
             </h2>
             <div className="col-span-full space-y-5 lg:col-span-4 lg:col-start-2 ">
               <p className="text-justify text-lg  tracking-wide ">{children}</p>
-              {path && (
+              {/* {path && (
                 <div className="flex -translate-x-12 justify-end  ">
                   <MoreButton
                     borderWidth="before:w-[59px]"
@@ -40,7 +40,7 @@ const ServiceItem = ({ title, after, children, path, image }: Props) => {
                     MORE
                   </MoreButton>
                 </div>
-              )}
+              )} */}
             </div>
           </div>
     </div>

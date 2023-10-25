@@ -1,15 +1,14 @@
+import { init, send } from "@emailjs/browser";
 import { useRouter } from "next/router";
 import { SubmitHandler, useFormContext } from "react-hook-form";
-import { init, send } from "@emailjs/browser";
 
-import ServiceTitle from "../Organisms/ServiceTitle";
 import InputLabel from "../Organisms/InputLabel";
+import ServiceTitle from "../Organisms/ServiceTitle";
 import TextAreaLabel from "../Organisms/TextAreaLabel";
 
 import type { FormValues } from "../../types/formValues";
 import Label from "../Atoms/Label";
 import TriangleLeft from "../Atoms/TriangleLeft";
-import TriangleRight from "../Atoms/TriangleRight";
 
 const Confirm = () => {
   const router = useRouter();
@@ -28,7 +27,6 @@ const Confirm = () => {
 
   const onSubmit: SubmitHandler<FormValues> = async (data) => {
     //emailjsに送信する処理
-    console.log(data);
     const serviceID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
     const templateID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
     const userID = process.env.NEXT_PUBLIC_EMAILJS_USER_ID;

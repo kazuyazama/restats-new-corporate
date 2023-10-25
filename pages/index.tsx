@@ -1,18 +1,18 @@
-import { createRef, Suspense, useEffect, useState } from "react";
-import { News } from "../types/News";
-import { client } from "../libs/client.js";
-import useTargetScroll from "../hooks/useTargetScroll";
-import Top from "../components/Organisms/Top";
-import Opening from "../components/Organisms/Opening";
-import TopAbout from "../components/Templates/TopAbout";
-import TopService from "../components/Templates/TopService";
-import TopCompany from "../components/Templates/TopCompany";
-import TopContact from "../components/Templates/TopContact";
-import TopParther from "../components/Templates/TopPartner";
+import { useEffect, useState } from "react";
 import ScrollDown from "../components/Atoms/ScrollDown";
-import TopNews from "../components/Templates/TopNews";
 import TriangleLeft from "../components/Atoms/TriangleLeft";
 import TriangleRight from "../components/Atoms/TriangleRight";
+import Opening from "../components/Organisms/Opening";
+import Top from "../components/Organisms/Top";
+import TopAbout from "../components/Templates/TopAbout";
+import TopCompany from "../components/Templates/TopCompany";
+import TopContact from "../components/Templates/TopContact";
+import TopNews from "../components/Templates/TopNews";
+import TopParther from "../components/Templates/TopPartner";
+import TopService from "../components/Templates/TopService";
+import useTargetScroll from "../hooks/useTargetScroll";
+import { client } from "../libs/client.js";
+import { News } from "../types/News";
 
 
 export const getStaticProps = async () => {

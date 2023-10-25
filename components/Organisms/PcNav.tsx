@@ -9,6 +9,9 @@ const PcNav = () => {
       <ul
         className={`flex justify-evenly gap-12 items-center cursor-pointer  text-gray-100 `}
       >
+         <ListItem borderWidth={"before:w-14"} href={"/"}>
+          HOME
+        </ListItem>
         <ListItem borderWidth={"before:w-14"} href={"/about"}>
           ABOUT
         </ListItem>
@@ -21,9 +24,9 @@ const PcNav = () => {
           COMPANY
         </ListItem>
 
-        <ListItem borderWidth={"before:w-[70px]"} href={"/partner"}>
+        {/* <ListItem borderWidth={"before:w-[70px]"} href={"/partner"}>
           PARTNER
-        </ListItem>
+        </ListItem> */}
 
         <ListItem borderWidth={"before:w-[70px]"} href={"/contact"}>
           CONTACT
