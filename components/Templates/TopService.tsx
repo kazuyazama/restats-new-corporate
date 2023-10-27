@@ -13,11 +13,11 @@ const TopService = () => {
       <ScrollFade>
         <div className="relative  ">
           <Card
-            title="マンションwifiネット"
-            discription="日本で唯一の集合住宅向けインターネット回線検索ポータルサイト。マンションwifiネットを運営しています"
+            title="AI事業"
+            discription="今後10年間でAIがほぼすべての分野で人間の叡智を追い抜いてしまうと言われています。私たちはこの変革を先導し、より良い未来を共に創造します"
             src="/マンションwifiネット.jpg"
             path="/service/#manshon-wifi"
-            bg="bg-manshonwifi"
+            bg="bg-ai"
             height="h-[30vh] lg:h-[47vh]  "
           />
           <div className="absolute right-0 -bottom-10 -translate-x-12">

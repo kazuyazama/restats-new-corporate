@@ -20,6 +20,7 @@ module.exports = {
         mainVisual: "url('/topImage-skelton.png')",
         machida: "url('/machida.webp')",
         machida2: "url('/machida2.webp')",
+        ai:"url('/ai.webp')",
         manshonwifi: "url('/マンションwifiネット.jpg')",
         "web-development": "url('/webDevelopment.webp')",
         agency: "url('/agency.webp')",
